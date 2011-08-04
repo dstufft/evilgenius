@@ -7,3 +7,6 @@ requirements_file = requirements/project.txt
 wsgi_entry_point = deploy.wsgi
 migrations = none
 staticfiles = on
+
+[files]
+include = settings/secret.py
