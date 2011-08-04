@@ -9,4 +9,4 @@ migrations = none
 staticfiles = on
 
 [files]
-include = settings/secret.py
+include = evilgenius_project/settings/secret.py
