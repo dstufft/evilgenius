@@ -45,7 +45,11 @@ FIXTURE_DIRS = [
     os.path.join(PROJECT_ROOT, "fixtures"),
 ]
 
-INSTALLED_APPS += []
+INSTALLED_APPS += [
+    "verbum",
+    "verbum.posts",
+    "verbum.links",
+]
 
 DEBUG_TOOLBAR_CONFIG = {
     "INTERCEPT_REDIRECTS": False,
