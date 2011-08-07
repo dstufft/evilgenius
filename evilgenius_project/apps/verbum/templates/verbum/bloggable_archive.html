@@ -1,0 +1,15 @@
+{% extends "verbum/base.html" %}
+
+{% block body %}
+    {% for item in latest %}
+        <article>
+            <header>
+                <h1>{{ item.title }}</h1>
+            </header>
+
+            <div>
+                {{ item }}
+            </div>
+        </article>
+    {% endfor %}
+{% endblock %}
