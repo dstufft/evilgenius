@@ -1,4 +1,4 @@
-{% load i18n compress %}
+{% load i18n compress ifsetting_tag %}
 <!doctype html>
 <!--[if lt IE 7 ]> <html lang="en-us" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en-us" class="no-js ie7"> <![endif]-->
@@ -36,13 +36,15 @@
         {% endblock %}
     {% endcompress %}
 
-    <!-- Page build tools - only needed while creating a site, remove when launching - Gray box colors and page debugging tools -->
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/columnal/build.css" type="text/css" media="screen" />
+    {% ifsetting TEMPLATE_WIREFRAME %}
+        {# Page build tools - only needed while creating a site, remove when launching - Gray box colors and page debugging tools #}
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/columnal/build.css" type="text/css" media="screen" />
+    {% endifsetting %}
 </head>
 
 <body class="{% block body_class %}base{% endblock %}">
 
-    <div class="container test">
+    <div class="container{% ifsetting TEMPLATE_WIREFRAME %} test{% endifsetting %}">
 
         <div class="row">
             <nav class="col_12">
