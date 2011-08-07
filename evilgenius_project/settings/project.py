@@ -4,6 +4,8 @@ import posixpath
 from .base import PROJECT_ROOT
 from .pinax import STATICFILES_DIRS, TEMPLATE_DIRS, INSTALLED_APPS
 
+TEMPLATE_WIREFRAME = False
+
 ADMINS = [
     ("Donald Stufft", "donald@e.vilgeni.us"),
 ]
