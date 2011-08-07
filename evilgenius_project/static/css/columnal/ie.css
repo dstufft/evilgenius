@@ -2,24 +2,24 @@
 _______________________________
 Columnal - General fixes for Internet Explorer */
 
-.col_1 {width: 4.855%;}
-.col_2 {width: 13.5%;}
-.col_3 {width: 22.15%;}
-.col_4 {width: 30.8%;}
-.col_5 {width: 39.405%;}
-.col_6 {width: 48.1%;}
-.col_7 {width: 56.75%;}
-.col_8 {width: 65.31%;}
-.col_9 {width: 74.05%;}
-.col_10 {width: 82.7%;}
-.col_11 {width: 91.35%;}
+.ie6 .col_1, .ie7 .col_1, .ie8 .col_1 {width: 4.855%;}
+.ie6 .col_2, .ie7 .col_2, .ie8 .col_2 {width: 13.5%;}
+.ie6 .col_3, .ie7 .col_3, .ie8 .col_3 {width: 22.15%;}
+.ie6 .col_4, .ie7 .col_4, .ie8 .col_4 {width: 30.8%;}
+.ie6 .col_5, .ie7 .col_5, .ie8 .col_5 {width: 39.405%;}
+.ie6 .col_6, .ie7 .col_6, .ie8 .col_6 {width: 48.1%;}
+.ie6 .col_7, .ie7 .col_7, .ie8 .col_7 {width: 56.75%;}
+.ie6 .col_8, .ie7 .col_8, .ie8 .col_8 {width: 65.31%;}
+.ie6 .col_9, .ie7 .col_9, .ie8 .col_9 {width: 74.05%;}
+.ie6 .col_10, .ie7 .col_10, .ie8 .col_10 {width: 82.7%;}
+.ie6 .col_11, .ie7 .col_11, .ie8 .col_11 {width: 91.35%;}
 
 
 /*
 _______________________________
 Columnal - sub-columns */
 
-.col_3 .col_2 {width:60.8%;}
+.ie6 .col_3 .col_2, .ie7 .col_3 .col_2, .ie8 .col_3 .col_2 {width:60.8%;}
 
 
 /*
@@ -27,36 +27,36 @@ _______________________________
 Columnal - addition */
 
 /* spacing for before column */
-.pre_1 {padding-left: 8.5%;}
-.pre_2 {padding-left: 17%;}
-.pre_3 {padding-left: 25.85%;}
-.pre_4 {padding-left: 34.4%;}
-.pre_5 {padding-left: 42.8%;}
-.pre_6 {padding-left: 51.8%;}
-.pre_7 {padding-left: 60.55%;}
-.pre_8 {padding-left: 65.4%;}
-.pre_9 {padding-left: 77.85%;}
-.pre_10 {padding-left: 86.5%;}
-.pre_11 {padding-left: 95.15%;}
+.ie6 .pre_1, .ie7 .pre_1, .ie8 .pre_1 {padding-left: 8.5%;}
+.ie6 .pre_2, .ie7 .pre_2, .ie8 .pre_2 {padding-left: 17%;}
+.ie6 .pre_3, .ie7 .pre_3, .ie8 .pre_3 {padding-left: 25.85%;}
+.ie6 .pre_4, .ie7 .pre_4, .ie8 .pre_4 {padding-left: 34.4%;}
+.ie6 .pre_5, .ie7 .pre_5, .ie8 .pre_5 {padding-left: 42.8%;}
+.ie6 .pre_6, .ie7 .pre_6, .ie8 .pre_6 {padding-left: 51.8%;}
+.ie6 .pre_7, .ie7 .pre_7, .ie8 .pre_7 {padding-left: 60.55%;}
+.ie6 .pre_8, .ie7 .pre_8, .ie8 .pre_8 {padding-left: 65.4%;}
+.ie6 .pre_9, .ie7 .pre_9, .ie8 .pre_9 {padding-left: 77.85%;}
+.ie6 .pre_10, .ie7 .pre_10, .ie8 .pre_10 {padding-left: 86.5%;}
+.ie6 .pre_11, .ie7 .pre_11, .ie8 .pre_11 {padding-left: 95.15%;}
 
 /* spacing for after column */
-.suf_1 {padding-right: 8.5%;}
-.suf_2 {padding-right: 17%;}
-.suf_3 {padding-right: 25.85%;}
-.suf_4 {padding-right: 34.4%;}
-.suf_5 {padding-right: 42.8%;}
-.suf_6 {padding-right: 51.8%;}
-.suf_7 {padding-right: 60.55%;}
-.suf_8 {padding-right: 65.4%;}
-.suf_9 {padding-right: 77.85%;}
-.suf_10 {padding-right: 86.5%;}
-.suf_11 {padding-right: 95.15%;}
+.ie6 .suf_1, .ie7 .suf_1, .ie8 .suf_1 {padding-right: 8.5%;}
+.ie6 .suf_2, .ie7 .suf_2, .ie8 .suf_2 {padding-right: 17%;}
+.ie6 .suf_3, .ie7 .suf_3, .ie8 .suf_3 {padding-right: 25.85%;}
+.ie6 .suf_4, .ie7 .suf_4, .ie8 .suf_4 {padding-right: 34.4%;}
+.ie6 .suf_5, .ie7 .suf_5, .ie8 .suf_5 {padding-right: 42.8%;}
+.ie6 .suf_6, .ie7 .suf_6, .ie8 .suf_6 {padding-right: 51.8%;}
+.ie6 .suf_7, .ie7 .suf_7, .ie8 .suf_7 {padding-right: 60.55%;}
+.ie6 .suf_8, .ie7 .suf_8, .ie8 .suf_8 {padding-right: 65.4%;}
+.ie6 .suf_9, .ie7 .suf_9, .ie8 .suf_9 {padding-right: 77.85%;}
+.ie6 .suf_10, .ie7 .suf_10, .ie8 .suf_10 {padding-right: 86.5%;}
+.ie6 .suf_11, .ie7 .suf_11, .ie8 .suf_11 {padding-right: 95.15%;}
 
 /* Grid >> Push & Pull
 --------------------------------------------------*/
-.container.navhead .col_2,
-.container.navhead .col_2 a,
-.container.navhead .col_2 img {line-height: 1; margin: 0 !important; padding-top: 0 !important; }
+.ie6 .container.navhead .col_2, .ie7 .container.navhead .col_2, .ie8 .container.navhead .col_2,
+.ie6 .container.navhead .col_2 a, .ie7 .container.navhead .col_2 a, .ie8 .container.navhead .col_2 a,
+.ie6 .container.navhead .col_2 img, .ie7 .container.navhead .col_2 img, .ie8 .container.navhead .col_2 img {line-height: 1; margin: 0 !important; padding-top: 0 !important; }
 
 /* since min-width does not work on IE8, the width can be customized here to make it a fixed width (like Columnal 0.8+ now does for Internet Explorer 6 and 7), by default the width is set to 984px to match the wider option for Internet Explorer 6 and 7 */
-.row {width: 984px !important;}
+.ie6 .row, .ie7 .row, .ie8 .row {width: 984px !important;}

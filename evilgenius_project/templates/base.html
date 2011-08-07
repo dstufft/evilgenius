@@ -13,35 +13,31 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {# The Columnal Grid (1140px wide base, load first), Type and image presets, and mobile stylesheet #}
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/columnal/columnal.css" type="text/css" media="screen" />
+    {% compress css %}
+        {# The Columnal Grid (1140px wide base, load first), Type and image presets, and mobile stylesheet #}
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/columnal/columnal.css" type="text/css" media="screen" />
 
-    {# Fixes for IE #}
-    <!--[if lt IE 9]>
+        {# Fixes for IE #}
         <link rel="stylesheet" href="{{ STATIC_URL }}css/columnal/ie.css" type="text/css" media="screen" />
-    <![endif]-->
 
-    {# use "fixed-984px-ie.css" or "fixed-960px-ie.css for a 984px or 960px fixed width for IE6 and 7 #}
-    <!--[if lte IE 7]>
+        {# use "fixed-984px-ie.css" or "fixed-960px-ie.css for a 984px or 960px fixed width for IE6 and 7 #}
         <link rel="stylesheet" href="{{ STATIC_URL }}css/columnal/fixed-984px-ie.css" type="text/css" media="screen" />
-    <![endif]-->
 
-    {# Fixes for IE6, only needed if IE 6 will be supported - width must match 984px or 960px of css file used above #}
-    {# Use .imagescale to fix IE6 issues with full-column width images (class must be added to any image wider than the column it is placed into) #}
-    <!--[if lte IE 6]>
+        {# Fixes for IE6, only needed if IE 6 will be supported - width must match 984px or 960px of css file used above #}
+        {# Use .imagescale to fix IE6 issues with full-column width images (class must be added to any image wider than the column it is placed into) #}
         <link rel="stylesheet" href="{{ STATIC_URL }}css/columnal/ie6-984px.css" type="text/css" media="screen" />
-    <![endif]-->
-    {# End Fixed for IE #}
+        {# End Fixed for IE #}
 
-    <!-- Customizations here -->
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/evilgenius.css" type="text/css" media="screen" />
+        {# Customize Here #}
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/evilgenius.css" type="text/css" media="screen" />
+
+        {% block extra_head_base %}
+            {% block extra_head %}{% endblock %}
+        {% endblock %}
+    {% endcompress %}
 
     <!-- Page build tools - only needed while creating a site, remove when launching - Gray box colors and page debugging tools -->
     <link rel="stylesheet" href="{{ STATIC_URL }}css/columnal/build.css" type="text/css" media="screen" />
-
-    {% block extra_head_base %}
-        {% block extra_head %}{% endblock %}
-    {% endblock %}
 </head>
 
 <body class="{% block body_class %}base{% endblock %}">
