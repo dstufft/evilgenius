@@ -1,3 +1,4 @@
+{% load url from future %}
 {% load i18n compress ifsetting_tag %}
 <!doctype html>
 <!--[if lt IE 7 ]> <html lang="en-us" class="no-js ie6"> <![endif]-->
@@ -31,6 +32,10 @@
         {# Customize Here #}
         <link rel="stylesheet" href="{{ STATIC_URL }}css/evilgenius.css" type="text/css" media="screen" />
 
+        <link href='http://fonts.googleapis.com/css?family=Rokkitt&amp;v2' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Istok+Web:400,700&amp;v2' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Play:400,700&amp;v2' rel='stylesheet' type='text/css' />
+
         {% block extra_head_base %}
             {% block extra_head %}{% endblock %}
         {% endblock %}
@@ -46,29 +51,43 @@
 
     <div class="container{% ifsetting TEMPLATE_WIREFRAME %} test{% endifsetting %}">
 
-        <div class="row">
-            <nav class="col_12">
+        <div class="top-bar row">
+            <nav id="main" class="col_10">
                 <ul>
-                    <li><a href="">Home</a></li>
+                    <li><a href="{% url settings.HOME_URLNAME %}">Home</a></li>
                 </ul>
             </nav>
+
+            <div class="col_2 last">
+                <ul id="social-media-icons">
+                    <li><a href="mailto:{{ settings.CONTACT_EMAIL }}"><img src="{{ STATIC_URL }}img/social/icon-email.png" /></a></li>
+                    <li><a href="{{ settings.TWITTER_URL }}"><img src="{{ STATIC_URL }}img/social/icon-twitter.png" /></a></li>
+                </ul>
+            </div>
         </div>
 
-        {# Flash Messages Go Here #}
+        {% include "_flash_messages.html" %}
 
         <div class="row">
 
             <div class="col_3">
 
-                <header class="col_12 last">
-                    <h1>{{ SITE_NAME }}</h1>
+                <header class="col_12 last sidebar-item">
+                    <h1 class="title"><a href="{% url settings.HOME_URLNAME %}">{{ SITE_NAME }}</a></h1>
+
+                    <div class="inner">
+                        <h2>{% trans "About Me" %}</h2>
+                        <div>
+                            Meatball hamburger ham, bacon fatback pastrami rump sirloin ground round t-bone boudin cow. Boudin sirloin ball tip, fatback beef ribs pork venison jerky pork belly.
+                        </div>
+                    </div>
                 </header>
 
                 {# Other Sidebar Items Go Here #}
 
             </div>
 
-            <section id="main" class="col_9 last">
+            <section class="col_9 last">
                 {% block body %}
                 {% endblock %}
             </section>
@@ -87,6 +106,7 @@
     {% compress js %}
         <script src="{% block jquery_src %}{{ STATIC_URL }}js/jquery-1.6.2.min.js{% endblock %}" type="text/javascript"></script>
         <script src="{{ STATIC_URL }}pinax/js/base.js" type="text/javascript"></script>
+        <script src="{{ STATIC_URL }}js/evilgenius.js" type="text/javascript"></script>
 
         {% block extra_body_base %}
             {% block extra_body %}{% endblock %}

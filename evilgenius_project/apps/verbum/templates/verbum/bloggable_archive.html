@@ -3,33 +3,34 @@
 {% block body %}
     {% for item in latest %}
         <article>
-            <div class="row">
-            <div class="post-body col_7 last">
-                <header>
-                    <h1>{{ item.get_title }}</h1>
-                </header>
+            <div class="box clearfix">
+                <div class="shadow post">
+                    <div class="frame">
+                        <header>
+                            <h2><a href="" title="{{ item.get_title }}">{{ item.get_title }}</a></h2>
+                        </header>
 
-                <div>
-                    {{ item.get_summary }}
-                </div>
-            </div>
-
-            <div class="post-meta col_2 last">
-                <div class="date meta-block">
-                    <div class="day">{{ item.when|date:"j" }}</div>
-                    <div class="month-year">
-                        <div class="month">{{ item.when|date:"M" }}</div>
-                        <div class="year">{{ item.when|date:"Y" }}</div>
+                        {{ item.get_summary }}
                     </div>
-                    <div class="clearfix"></div>
                 </div>
 
-                <div class="meta-block author">
-                    <div>Author</div>
-                    <div><a href="">{{ item.author }}</a></div>
-                </div>
+                <aside>
+                    <div class="bar-frame">
+                        <div class="date clearfix">
+                            <strong class="day">20</strong>
+                            <div class="holder">
+                                <span class="month">Jul</span>
+                                <span class="year">2011</span>
+                            </div>
+                        </div>
+
+                        <div class="author">
+                            <strong class="title">AUTHOR</strong>
+                            <a href="" title="" rel="">{{ item.author }}</a>
+                        </div>
+                    </div>
+                </aside>
             </div>
-                </div>
         </article>
     {% endfor %}
 {% endblock %}

@@ -2,9 +2,261 @@
 _______________________________
 Desktop version layout - place your custom code here */
 
-body {
-    background: #000;
+/*
+--------------------------
+Misc */
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
 }
+
+.clearfix {
+    *display: inline-block;
+    height: 1%;
+}
+
+/*
+-------------------------
+General */
+
+body {
+    margin-top: 75px;
+    color: #555;
+    font: 12px/18px 'Istok Web', Helvetica, Arial, sans-serif;
+    background: #191919 url(../img/bg.png);
+}
+
+a { text-decoration: none }
+
+a:hover { text-decoration: underline }
+
+/*
+--------------------------
+Text Formatting */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 25px 0;
+    font-family: 'Play', Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+h1 { font-size: 26px }
+
+h2 { font-size: 24px }
+
+h3 { font-size: 20px }
+
+h4 { font-size: 18px }
+
+h5 { font-size: 14px }
+
+h6 { font-size: 12px }
+
+
+/*
+--------------------------
+Menu Bar */
+
+.top-bar {
+    background: url(../img/darkbg.jpg);
+    max-width: 1046px;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+nav#main a {
+    color: #ddd;
+    padding: 11px 20px 11px 20px;
+}
+
+nav#main a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav#main ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-position: outside;
+    position: relative;
+}
+
+nav#main ul > li {
+    float: left;
+    padding: 0 0 0 0px;
+    margin: 0 0px 0 0px;
+    display: inline;
+    border-right: dotted 1px #444;
+}
+
+nav#main a {
+    display: block;
+    text-shadow: 1px 1px #444;
+}
+
+nav#main a:hover {
+    color: #fff;
+    display: block;
+
+}
+
+/*
+--------------------------
+Social Media Icons */
+
+ul#social-media-icons {
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+ul#social-media-icons li {
+    margin: 0;
+    padding-top: 8px;
+    display: inline-block;
+    height: 40px;
+}
+
+/*
+--------------------------
+Messages */
+
+ul#messages {
+    margin: 0 0 15px 0;
+    list-style: none;
+}
+
+ul#messages li {
+    font-family: 'Play', Helvetica, sans-serif;
+    background: url(../img/postbg.jpg);
+    padding: 8px 8px 8px 8px;
+    margin: 0 0 10px 0;
+}
+
+ul#messages li a.clear {
+    padding-right: 15px;
+    color: #acacac;
+    float: right;
+}
+
+ul#messages li a.clear:hover {
+    color: #888;
+    text-decoration: none;
+}
+
+ul#messages .debug {
+    background: #EEE;
+    border: 1px solid #BBB;
+}
+
+ul#messages .info {
+    background: #DEF;
+    border: 1px solid #9BC;
+}
+
+ul#messages .success {
+    background: #EFD;
+    border: 1px solid #BC9;
+}
+
+ul#messages .warning {
+    background: #FED;
+    border: 1px solid #CB9;
+}
+
+ul#messages .error {
+    background: #FDD;
+    border: 1px solid #C99;
+}
+
+/*
+--------------------------
+Footer */
+
+footer {
+    padding: 10px 20px 10px 20px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #ddd;
+    display: block;
+    background: url(../img/darkbg.jpg);
+    margin: 0 0 0 0;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+footer a { color: #ddd; }
+
+footer a:visited { color: #ddd; }
+footer a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .legal {
+    float: left;
+}
+
+footer .hosted-on {
+    float: right;
+}
+
+/*
+_______________________________
+Sidebar Styles */
+
+.sidebar-item {
+    font: 11px/18px Helvetica, Arial, sans-serif;
+    color: #888;
+    background: url(../img/postbg.jpg);
+
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 3px;
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 3px;
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 3px;
+}
+
+.sidebar-item .title {
+    font-size: 16px;
+    font-family: 'Play', Helvetica, sans-serif;
+    line-height: 22px;
+    font-weight: bold;
+    text-align: center;
+
+    background:url(../img/darkbg.jpg);
+    color:#aaa;
+    padding: 10px 10px 10px 10px;
+    margin:0 0 25px 0;
+}
+
+.sidebar-item .title a {
+    color: #eee;
+    display: block;
+}
+
+.sidebar-item .title a:hover { text-decoration: none; }
+
+.sidebar-item h2 {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-family: 'Play', arial, serif;
+    color: #555;
+}
+
+.sidebar-item .inner {
+    padding: 0 10px 25px 25px;
+    margin: 0 0 25px;
+    border-bottom: dotted 1px #ccc;
+}
+
+
 
 
 /*
@@ -12,72 +264,94 @@ _______________________________
 Verbum Styles */
 
 .verbum article {
-    margin-bottom: 4em;
+    padding: 0 0 75px 0;
 }
 
-.verbum article .post-body {
-    background: #ffffff;
-    padding: 1em 1em 1em 1em;
-}
-
-.verbum article .post-body h1 {
-    font-size: 1.5em;
-
-    margin: 0 0 0.6em 0;
-    padding-bottom: 0.2em;
-    border-bottom: 1px #c1c1c1 dotted;
-}
-
-.verbum article .post-meta {
-    background: #ffffff;
-    width: 19.379%;
-}
-
-.verbum article .post-meta .meta-block {
-    line-height: 1em;
-    margin: 0 auto;
-    width: 80%;
-}
-
-.verbum article .post-meta .date {
-    border-bottom: 1px #c1c1c1 dotted;
-    padding-bottom: 0.2em;
-}
-
-.verbum article .post-meta .date .day {
-    padding-top: 0.55em;
-    font-size: 2.5em;
+.verbum .post {
     float: left;
 }
 
-.verbum article .post-meta .date .month-year {
-    padding-top: 0.9em;
-    padding-left: 0.2em;
-    line-height: 1em;
+.verbum article .shadow {
+    background: url(../img/shadow.png) no-repeat center bottom;
+    padding-bottom: 13px;
+}
+
+.verbum article .frame {
+    width: 594px;
+    padding: 30px 30px 15px 30px;
+    border: solid 1px #e7e7e7;
+    border-bottom: none;
+    background: #fff;
+}
+
+.verbum article header h2 {
+    font-size: 20px;
+    color: #292929;
+    margin: 0 0 15px;
+    font-family: 'Play', arial, serif;
+    font-weight: normal;
+    padding-bottom: 15px;
+    border-bottom: dotted 1px #ddd;
+}
+
+.verbum article header h2 a { color: #3a3a3a; }
+.verbum article header h2 a:hover { text-decoration: none; }
+
+.verbum article aside {
     float: left;
+    background: url(../img/postbg.jpg);
+    width: 117px;
+    font: 11px/13px Helvetica, Arial, sans-serif;
+    border-top: solid 1px #e7e7e7;
+    border-right: solid 1px #e7e7e7;
+    border-bottom: solid 1px #e7e7e7;
 }
 
-.verbum article .post-meta .date .month {
-    font-size: 0.9em;
+.verbum article aside .bar-frame { padding: 15px 15px 25px 15px }
+
+.verbum article aside .date {
+    width: 90px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #a4a4a4;
+    font-weight: bold;
+    font-family: 'Play', Helvetica;
+    border-bottom: dotted 1px #ccc;
 }
 
-.verbum article .post-meta .date .year {
-    font-size: 0.9em;
+.verbum article aside .day {
+    float: left;
+    font-size: 34px;
+    line-height: 48px;
+    color: #2e2e2e;
+    letter-spacing: -3px;
 }
 
-.verbum article .post-meta .author {
-    padding-top: 1em;
-    padding-left: 2em;
+.verbum article aside .date .holder {
+    float: right;
+    width: 49px;
+    padding: 10px 0 0;
 }
 
-
-
-
-
-.clearfix {
-    clear: both;
+.verbum article aside .month {
+    color: #797979;
+    display: block;
+    margin: 0 0 -6px;
+    text-transform: uppercase;
 }
 
+.verbum article aside .title {
+    display: block;
+    font-size: 09px;
+    line-height: 12px;
+    font-weight: bold;
+    color: #494949;
+}
+
+.verbum article aside .author {
+    width: 100%;
+    padding: 15px 14px 0 0;
+}
 
 /*
 _______________________________
