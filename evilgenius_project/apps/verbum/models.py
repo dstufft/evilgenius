@@ -11,19 +11,24 @@ from model_utils.managers import InheritanceManager
 
 from taggit.managers import TaggableManager
 
+from verbum import conf
+
 class Bloggable(models.Model):
 
-    category = None
+    category_name = ""
 
     STATUS = Choices(
         ("draft", _("draft")),
         ("published", _("published")),
     )
 
+    CATEGORIES = Choices(*conf.CATEGORIES)
+
     # Meta Data
     status = StatusField(_("status"))
     when = models.DateTimeField(_("when"), default=datetime.now)
     allow_comments = models.BooleanField(_("Allow Comments"), default=True)
+    category = models.CharField(_("category"), max_length=75, choices=CATEGORIES, editable=False)
 
     # Common Data
     title = models.CharField(_("title"), max_length=150)
@@ -31,7 +36,7 @@ class Bloggable(models.Model):
     author = models.ForeignKey("auth.User", verbose_name=_("author"))
 
     objects = InheritanceManager()
-    tags = TaggableManager()
+    tags = TaggableManager(blank=True)
 
     class Meta:
         verbose_name = _("bloggable")
@@ -41,6 +46,11 @@ class Bloggable(models.Model):
 
     def __unicode__(self):
         return "{0}".format(self.title)
+
+    def save(self, *args, **kwargs):
+        if not len(self.category) and self.category_name:
+            self.category = getattr(self.CATEGORIES, self.category_name)
+        return super(Bloggable, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse(
@@ -59,7 +69,7 @@ class Bloggable(models.Model):
 
 class Post(Bloggable):
 
-    category = _("Post")
+    category_name = "post"
 
     body = models.TextField(_("body"))
     excerpt = models.TextField(_("excerpt"), blank=True)
@@ -76,7 +86,7 @@ class Post(Bloggable):
 
 class Link(Bloggable):
 
-    category = _("Link")
+    category_name = "link"
 
     url = models.URLField(_("url"), max_length=250)
     summary = models.TextField(_("summary"), blank=True)
