@@ -550,6 +550,15 @@ Verbum Links */
 }
 
 /*
+--------------------------
+Flatpages */
+
+.flatpages section article {
+    background: #fff;
+    padding: 1em 1em 1em 1em;
+}
+
+/*
 _______________________________
 Mobile version - preset code from cssgrid.net */
 

@@ -1,0 +1,16 @@
+{% extends "site_base.html" %}
+{% load markup %}
+
+{% block head_title %}{{ flatpage.title }}{% endblock %}
+
+{% block body_class %}flatpages{% endblock %}
+
+{% block body %}
+    <article>
+        <header>
+            <h2>{{ flatpage.title }}</h2>
+        </header>
+
+        {{ flatpage.content|restructuredtext }}
+    </article>
+{% endblock %}
