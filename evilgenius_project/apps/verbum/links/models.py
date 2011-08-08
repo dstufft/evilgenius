@@ -12,3 +12,6 @@ class Link(Bloggable):
 
         verbose_name = _("link")
         verbose_name_plural = _("links")
+
+    def get_summary(self):
+        return self.url

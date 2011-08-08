@@ -13,3 +13,6 @@ class Post(Bloggable):
         
         verbose_name = _("post")
         verbose_name_plural = _("posts")
+
+    def get_summary(self):
+        return self.excerpt
