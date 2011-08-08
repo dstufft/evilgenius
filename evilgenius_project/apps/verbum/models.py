@@ -3,10 +3,11 @@ from datetime import datetime
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.template.loader import render_to_string
+from django.utils.html import escape
 from django.utils.translation import ugettext_lazy as _
 
 from model_utils import Choices
-from model_utils.fields import StatusField
+from model_utils.fields import StatusField, SplitField, SPLIT_MARKER, SPLIT_DEFAULT_PARAGRAPHS
 from model_utils.managers import InheritanceManager
 
 from taggit.managers import TaggableManager
@@ -71,8 +72,9 @@ class Post(Bloggable):
 
     category_name = "post"
 
-    body = models.TextField(_("body"))
-    excerpt = models.TextField(_("excerpt"), blank=True)
+    body = SplitField(_("body"),
+        help_text=_("Will split the excerpt at %s paragraphs, or when it finds %s") % \
+                  (SPLIT_DEFAULT_PARAGRAPHS, escape(SPLIT_MARKER)))
 
     class Meta:
         verbose_name = _("post")
