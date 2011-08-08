@@ -7,10 +7,20 @@ class VerbumIndexView(ArchiveIndexView):
 
     date_field = "when"
     paginate_by = conf.PAGINATE_BY
+    
     queryset = Bloggable.objects.filter(status=Bloggable.STATUS.published).select_subclasses()
 
 
 class CategoryIndexView(VerbumIndexView):
+
+    template_name = "verbum/bloggable_categories.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(CategoryIndexView, self).get_context_data(**kwargs)
+        context.update({
+            "category": self.kwargs["category"],
+        })
+        return context
 
     def get_queryset(self):
         qs = super(CategoryIndexView, self).get_queryset()
