@@ -7,6 +7,7 @@ from verbum.models import Bloggable
 class Link(Bloggable):
 
     url = models.URLField(_("url"), max_length=250)
+    summary = models.TextField(_("summary"), blank=True)
 
     class Meta:
         app_label = "verbum"

@@ -329,6 +329,10 @@ Verbum Styles */
     font-style: normal;
 }
 
+.verbum article .link .summary {
+    margin-top: 1em;
+}
+
 .verbum article .codeblock {
     max-width: 564px;
 }
