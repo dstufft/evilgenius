@@ -21,6 +21,7 @@ class Bloggable(models.Model):
     # Meta Data
     status = StatusField(_("status"))
     when = models.DateTimeField(_("when"), default=datetime.now)
+    allow_comments = models.BooleanField(_("Allow Comments"), default=True)
 
     # Common Data
     title = models.CharField(_("title"), max_length=150)

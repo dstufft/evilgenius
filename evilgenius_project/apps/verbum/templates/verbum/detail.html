@@ -46,14 +46,16 @@
         </div>
     </article>
 
-    <section id="comments">
-        <div class="box clearfix">
-            <div class="shadow post">
-                <div class="frame">
-                    {% disqus_show_comments %}
+    {% if object.allow_comments %}
+        <section id="comments">
+            <div class="box clearfix">
+                <div class="shadow post">
+                    <div class="frame">
+                        {% disqus_show_comments %}
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    {% endif %}
     
 {% endblock %}
