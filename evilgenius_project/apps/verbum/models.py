@@ -65,7 +65,7 @@ class Post(Bloggable):
         verbose_name_plural = _("posts")
 
     def get_summary(self):
-        return render_to_string("verbum/posts/summary.html", {
+        return render_to_string("verbum/post/summary.html", {
             "post": self,
         })
 
@@ -85,6 +85,6 @@ class Link(Bloggable):
         return self.url
 
     def get_summary(self):
-        return render_to_string("verbum/links/summary.html", {
+        return render_to_string("verbum/link/summary.html", {
             "link": self,
         })
