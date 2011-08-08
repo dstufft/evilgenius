@@ -111,6 +111,58 @@ nav#main a:hover {
 
 /*
 --------------------------
+Messages */
+
+ul#messages {
+    margin: 0 0 15px 0;
+    list-style: none;
+}
+
+ul#messages li {
+    font-family: 'Play', Helvetica, sans-serif;
+    background: url(../img/postbg.jpg);
+    padding: 8px 8px 8px 8px;
+    margin: 0 0 10px 0;
+}
+
+ul#messages li a.clear {
+    padding-right: 15px;
+    color: #acacac;
+    float: right;
+}
+
+ul#messages li a.clear:hover {
+    color: #888;
+    text-decoration: none;
+}
+
+ul#messages .debug {
+    background: #EEE;
+    border: 1px solid #BBB;
+}
+
+ul#messages .info {
+    background: #DEF;
+    border: 1px solid #9BC;
+}
+
+ul#messages .success {
+    background: #EFD;
+    border: 1px solid #BC9;
+}
+
+ul#messages .warning {
+    background: #FED;
+    border: 1px solid #CB9;
+}
+
+ul#messages .error {
+    background: #FDD;
+    border: 1px solid #C99;
+}
+
+/*
+--------------------------
 Footer */
 
 footer {

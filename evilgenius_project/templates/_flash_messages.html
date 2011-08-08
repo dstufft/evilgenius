@@ -1,0 +1,11 @@
+{% load i18n %}
+{% if messages %}
+    <ul id="messages" class="row">
+        {% for message in messages %}
+        <li id="message_{{ forloop.counter }}" class="col_12{% if message.tags %} {{ message.tags }}{% endif %}">
+            <a href="#" class="clear">{% trans "clear" %}</a>
+            {{ message }}
+        </li>
+        {% endfor %}
+    </ul>
+{% endif %}
