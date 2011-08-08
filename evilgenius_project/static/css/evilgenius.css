@@ -449,6 +449,10 @@ Verbum Pager */
 --------------------------
 DisQus Comments */
 
+.verbum #comments {
+    padding-bottom: 75px;
+}
+
 .verbum #comments .shadow {
     background: url(../img/shadow.png) no-repeat center bottom;
     padding-bottom: 13px;
