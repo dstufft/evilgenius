@@ -297,6 +297,19 @@ Verbum Styles */
 .verbum article header h2 a { color: #3a3a3a; }
 .verbum article header h2 a:hover { text-decoration: none; }
 
+.verbum article .codeblock {
+    max-width: 564px;
+}
+
+.verbum article .codeblock pre {
+    width: 100%;
+    overflow-x: auto;
+    background: #111;
+    padding: 1em 1em 1em 1em;
+    margin-bottom: 1em;
+    font-weight: normal;
+}
+
 .verbum article aside {
     float: left;
     background: url(../img/postbg.jpg);
