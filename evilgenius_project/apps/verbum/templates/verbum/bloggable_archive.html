@@ -28,7 +28,7 @@
 
                         <div class="author">
                             <strong class="title">AUTHOR</strong>
-                            <a href="" title="" rel="">{{ item.author.get_full_name|default:item.author }}</a>
+                            <a href="{{ item.author.get_absolute_url }}" title="{{ item.author.get_full_name|default:item.author }}">{{ item.author.get_full_name|default:item.author }}</a>
                         </div>
 
                         {% if item.category %}

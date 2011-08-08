@@ -68,6 +68,10 @@ TWITTER_URL = "http://twitter.com/dstufft"
 
 DISQUS_WEBSITE_SHORTNAME = "evilgenius"
 
+ABSOLUTE_URL_OVERRIDES = {
+    "auth.user": lambda u: "/about/%s/" % u.username,
+}
+
 DEBUG_TOOLBAR_CONFIG = {
     "INTERCEPT_REDIRECTS": False,
 }
