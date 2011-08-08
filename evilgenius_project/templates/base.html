@@ -51,14 +51,17 @@
     <div class="container{% ifsetting TEMPLATE_WIREFRAME %} test{% endifsetting %}">
 
         <div class="top-bar row">
-            <nav id="main" class="col_6">
+            <nav id="main" class="col_10">
                 <ul>
                     <li><a href="">Home</a></li>
                 </ul>
             </nav>
 
-            <div id="social-media-icons" class="col_6 last">
-                
+            <div class="col_2 last">
+                <ul id="social-media-icons">
+                    <li><a href=""><img src="{{ STATIC_URL }}img/social/icon-email.png" /></a></li>
+                    <li><a href=""><img src="{{ STATIC_URL }}img/social/icon-twitter.png" /></a></li>
+                </ul>
             </div>
         </div>
 
@@ -102,6 +105,7 @@
     {% compress js %}
         <script src="{% block jquery_src %}{{ STATIC_URL }}js/jquery-1.6.2.min.js{% endblock %}" type="text/javascript"></script>
         <script src="{{ STATIC_URL }}pinax/js/base.js" type="text/javascript"></script>
+        <script src="{{ STATIC_URL }}js/evilgenius.js" type="text/javascript"></script>
 
         {% block extra_body_base %}
             {% block extra_body %}{% endblock %}

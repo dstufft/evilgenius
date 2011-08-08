@@ -64,6 +64,7 @@ Menu Bar */
 .top-bar {
     background: url(../img/darkbg.jpg);
     max-width: 1046px;
+    height: 40px;
     position: fixed;
     top: 0;
     z-index: 99;
@@ -104,6 +105,23 @@ nav#main a:hover {
     color: #fff;
     display: block;
 
+}
+
+/*
+--------------------------
+Social Media Icons */
+
+ul#social-media-icons {
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+ul#social-media-icons li {
+    margin: 0;
+    padding-top: 8px;
+    display: inline-block;
+    height: 40px;
 }
 
 /*
