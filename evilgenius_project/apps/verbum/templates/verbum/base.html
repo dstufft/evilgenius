@@ -1,3 +1,7 @@
 {% extends "site_base.html" %}
 
 {% block body_class %}verbum{% endblock %}
+
+{% block extra_body %}
+    {% disqus_num_replies %}
+{% endblock %}
