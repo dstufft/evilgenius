@@ -3,11 +3,11 @@ from verbum.models import Post, Link
 
 
 class PostAdmin(admin.ModelAdmin):
-    pass
+    prepopulated_fields = {"slug": ["title"]}
 
 
 class LinkAdmin(admin.ModelAdmin):
-    pass
+    prepopulated_fields = {"slug": ["title"]}
 
 
 admin.site.register(Post, PostAdmin)
