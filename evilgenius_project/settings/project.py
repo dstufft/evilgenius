@@ -54,6 +54,7 @@ FIXTURE_DIRS = [
 INSTALLED_APPS += [
     "django.contrib.markup",
 
+    "taggit",
     "disqus",
     "south",
 
