@@ -17,10 +17,10 @@
                 <aside>
                     <div class="bar-frame">
                         <div class="date clearfix">
-                            <strong class="day">20</strong>
+                            <strong class="day">{{ item.when|date:"j" }}</strong>
                             <div class="holder">
-                                <span class="month">Jul</span>
-                                <span class="year">2011</span>
+                                <span class="month">{{ item.when|date:"M" }}</span>
+                                <span class="year">{{ item.when|date:"Y" }}</span>
                             </div>
                         </div>
 
