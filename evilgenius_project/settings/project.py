@@ -54,6 +54,7 @@ FIXTURE_DIRS = [
 INSTALLED_APPS += [
     "django.contrib.markup",
 
+    "disqus",
     "south",
 
     "verbum",
@@ -63,6 +64,8 @@ HOME_URLNAME = "verbum_index"
 
 CONTACT_EMAIL = "donald@e.vilgeni.us"
 TWITTER_URL = "http://twitter.com/dstufft"
+
+DISQUS_WEBSITE_SHORTNAME = "evilgenius"
 
 DEBUG_TOOLBAR_CONFIG = {
     "INTERCEPT_REDIRECTS": False,
