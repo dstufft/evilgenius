@@ -1,5 +1,6 @@
 from datetime import datetime
 
+from django.core.urlresolvers import reverse
 from django.db import models
 from django.template.loader import render_to_string
 from django.utils.translation import ugettext_lazy as _
@@ -36,6 +37,17 @@ class Bloggable(models.Model):
 
     def __unicode__(self):
         return "{0}".format(self.title)
+
+    def get_absolute_url(self):
+        return reverse(
+            "verbum_detail",
+            kwargs={
+                "year": self.when.strftime("%Y"),
+                "month": self.when.strftime("%b").lower(),
+                "day": self.when.strftime("%d"),
+                "slug": self.slug,
+            }
+        )
 
     def get_title(self):
         return self.title
