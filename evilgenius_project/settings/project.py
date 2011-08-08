@@ -2,7 +2,13 @@ import os.path
 import posixpath
 
 from .base import PROJECT_ROOT
-from .pinax import STATICFILES_DIRS, TEMPLATE_DIRS, INSTALLED_APPS, TEMPLATE_CONTEXT_PROCESSORS
+from .pinax import (
+    STATICFILES_DIRS,
+    TEMPLATE_DIRS,
+    INSTALLED_APPS,
+    TEMPLATE_CONTEXT_PROCESSORS,
+    MIDDLEWARE_CLASSES
+)
 
 TEMPLATE_WIREFRAME = False
 
@@ -43,6 +49,8 @@ ADMIN_MEDIA_PREFIX = posixpath.join(STATIC_URL, "admin/")
 
 ROOT_URLCONF = "evilgenius_project.urls"
 
+MIDDLEWARE_CLASSES += ["django.contrib.flatpages.middleware.FlatpageFallbackMiddleware"]
+
 TEMPLATE_CONTEXT_PROCESSORS += ["evilgenius.context_processors.configuration"]
 
 TEMPLATE_DIRS = [os.path.join(PROJECT_ROOT, "templates")] + TEMPLATE_DIRS
@@ -53,6 +61,7 @@ FIXTURE_DIRS = [
 
 INSTALLED_APPS += [
     "django.contrib.markup",
+    "django.contrib.flatpages",
 
     "taggit",
     "disqus",
