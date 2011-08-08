@@ -332,8 +332,9 @@ Verbum Styles */
 }
 
 .verbum article aside .date .holder {
-    float: right;
+    float: left;
     width: 49px;
+    margin-left: 7px;
     padding: 10px 0 0;
 }
 
