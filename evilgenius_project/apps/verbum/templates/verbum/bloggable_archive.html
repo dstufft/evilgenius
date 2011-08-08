@@ -1,0 +1,35 @@
+{% extends "verbum/base.html" %}
+
+{% block body %}
+    {% for item in latest %}
+        <article>
+            <div class="row">
+            <div class="post-body col_7 last">
+                <header>
+                    <h1>{{ item.get_title }}</h1>
+                </header>
+
+                <div>
+                    {{ item.get_summary }}
+                </div>
+            </div>
+
+            <div class="post-meta col_2 last">
+                <div class="date meta-block">
+                    <div class="day">{{ item.when|date:"j" }}</div>
+                    <div class="month-year">
+                        <div class="month">{{ item.when|date:"M" }}</div>
+                        <div class="year">{{ item.when|date:"Y" }}</div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="meta-block author">
+                    <div>Author</div>
+                    <div><a href="">{{ item.author }}</a></div>
+                </div>
+            </div>
+                </div>
+        </article>
+    {% endfor %}
+{% endblock %}

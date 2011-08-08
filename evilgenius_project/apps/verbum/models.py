@@ -33,3 +33,6 @@ class Bloggable(models.Model):
 
     def __unicode__(self):
         return "{0}".format(self.title)
+
+    def get_title(self):
+        return self.title
