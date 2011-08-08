@@ -4,8 +4,7 @@ from verbum.views import VerbumIndexView, CategoryIndexView, VerbumDetailView
 
 urlpatterns = patterns("",
     # General Archive Views
-    url(r"^$", VerbumIndexView.as_view(), name="verbum_index"),
-    url(r"^page(?P<page>[\d]+)/$", VerbumIndexView.as_view(), name="verbum_index_paged"),
+    url(r"^(?:page(?P<page>[\d]+)/)?$", VerbumIndexView.as_view(), name="verbum_index"),
 
     # Category Archive Views
     url(r"^category/(?P<category>[\w]+)/$", CategoryIndexView.as_view(), name="verbum_category_index"),
