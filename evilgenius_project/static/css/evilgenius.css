@@ -31,9 +31,12 @@ body {
     background: #191919 url(../img/bg.png);
 }
 
-a { text-decoration: none }
+a { color: #c14b0d; text-decoration: none; }
 
-a:hover { text-decoration: underline }
+a:link { color: #c14b0d; }
+a:visited { color: #c14b0d; }
+a:active { color: #c14b0d; }
+a:hover { color: #eb6721; text-decoration: underline }
 
 /*
 --------------------------
@@ -278,7 +281,7 @@ Verbum Styles */
 
 .verbum article .frame {
     width: 594px;
-    min-height: 85px;
+    min-height: 125px;
     padding: 30px 30px 15px 30px;
     border: solid 1px #e7e7e7;
     border-bottom: none;
