@@ -55,7 +55,7 @@
                             <strong class="title">TAGS</strong>
                             <ul>
                                 {% for tag in item.tags.all %}
-                                <li{% if forloop.last %} class="last"{% endif %}><a href="">{{ tag }}</a></li>
+                                <li{% if forloop.last %} class="last"{% endif %}><a href="{% url 'verbum_tag' tag=tag %}">{{ tag }}</a></li>
                                 {% endfor %}
                             </ul>
                         </div>
