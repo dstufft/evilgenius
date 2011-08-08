@@ -50,6 +50,8 @@ FIXTURE_DIRS = [
 ]
 
 INSTALLED_APPS += [
+    "django.contrib.markup",
+    
     "verbum",
     "verbum.posts",
     "verbum.links",

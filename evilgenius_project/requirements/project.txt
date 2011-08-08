@@ -4,3 +4,6 @@ gondor>=1.0b1.post10
 psycopg2>=2.4.2
 
 django-model-utils==1.0.0
+
+Pygments==1.4
+docutils==0.8
