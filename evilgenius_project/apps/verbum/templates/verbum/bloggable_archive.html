@@ -26,7 +26,7 @@
 
                         <div class="author">
                             <strong class="title">AUTHOR</strong>
-                            <a href="" title="" rel="">{{ item.author }}</a>
+                            <a href="" title="" rel="">{{ item.author.get_full_name|default:item.author }}</a>
                         </div>
 
                         {% if item.category %}
