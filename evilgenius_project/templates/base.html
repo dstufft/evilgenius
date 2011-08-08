@@ -51,7 +51,7 @@
     <div class="container{% ifsetting TEMPLATE_WIREFRAME %} test{% endifsetting %}">
 
         <div class="row">
-            <nav class="col_12">
+            <nav id="main" class="col_12">
                 <ul>
                     <li><a href="">Home</a></li>
                 </ul>
@@ -72,7 +72,7 @@
 
             </div>
 
-            <section id="main" class="col_9 last">
+            <section class="col_9 last">
                 {% block body %}
                 {% endblock %}
             </section>

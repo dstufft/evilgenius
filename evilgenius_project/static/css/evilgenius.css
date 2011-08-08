@@ -22,6 +22,51 @@ body {
     height: 1%;
 }
 
+/*
+--------------------------
+Menu Bar */
+
+nav#main {
+    background: url(../img/darkbg.jpg);
+}
+
+nav#main a {
+    color: #ddd;
+    padding: 11px 20px 11px 20px;
+}
+
+nav#main a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav#main ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-position: outside;
+    position: relative;
+}
+
+nav#main ul > li {
+    float: left;
+    padding: 0 0 0 0px;
+    margin: 0 0px 0 0px;
+    display: inline;
+    border-right: dotted 1px #444;
+}
+
+nav#main a {
+    display: block;
+    text-shadow: 1px 1px #444;
+}
+
+nav#main a:hover {
+    color: #fff;
+    display: block;
+
+}
+
 
 /*
 _______________________________
