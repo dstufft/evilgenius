@@ -6,6 +6,8 @@ from verbum.models import Bloggable
 
 class Post(Bloggable):
 
+    category = _("Post")
+
     body = models.TextField(_("body"))
     excerpt = models.TextField(_("excerpt"), blank=True)
 

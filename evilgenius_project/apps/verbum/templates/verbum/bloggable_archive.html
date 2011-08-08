@@ -28,6 +28,13 @@
                             <strong class="title">AUTHOR</strong>
                             <a href="" title="" rel="">{{ item.author }}</a>
                         </div>
+
+                        {% if item.category %}
+                            <div class="category">
+                                <strong class="title">CATEGORY</strong>
+                                <a href="" title="" rel="">{{ item.category }}</a>
+                            </div>
+                        {% endif %}
                     </div>
                 </aside>
             </div>

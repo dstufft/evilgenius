@@ -9,6 +9,8 @@ from model_utils.managers import InheritanceManager
 
 class Bloggable(models.Model):
 
+    category = None
+
     STATUS = Choices(
         ("draft", _("draft")),
         ("published", _("published")),

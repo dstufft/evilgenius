@@ -349,7 +349,8 @@ Verbum Styles */
     color: #494949;
 }
 
-.verbum article aside .author {
+.verbum article aside .author,
+.verbum article aside .category {
     width: 100%;
     padding: 15px 14px 0 0;
 }

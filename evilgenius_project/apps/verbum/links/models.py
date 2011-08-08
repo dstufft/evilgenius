@@ -6,6 +6,8 @@ from verbum.models import Bloggable
 
 class Link(Bloggable):
 
+    category = _("Link")
+
     url = models.URLField(_("url"), max_length=250)
     summary = models.TextField(_("summary"), blank=True)
 
