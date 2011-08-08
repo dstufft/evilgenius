@@ -48,6 +48,17 @@
                             <a href="http://{{ SITE_DOMAIN }}{{ object.get_absolute_url }}#disqus_thread" data-disqus-identifier="{{ object.category }}_{{ object.id }}">View Comments</a>
                         </div>
                     {% endif %}
+
+                    {% if item.tags.all %}
+                        <div class="tags">
+                            <strong class="title">TAGS</strong>
+                            <ul>
+                                {% for tag in item.tags.all %}
+                                <li{% if forloop.last %} class="last"{% endif %}><a href="">{{ tag }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
                 </div>
             </aside>
         </div>

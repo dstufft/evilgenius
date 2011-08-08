@@ -395,9 +395,33 @@ Verbum Styles */
 
 .verbum article aside .author,
 .verbum article aside .category,
-.verbum article aside .comments {
+.verbum article aside .comments,
+.verbum article aside .tags {
     width: 100%;
     padding: 15px 14px 0 0;
+}
+
+.verbum article aside .tags ul {
+    margin: 0;
+    list-style: none;
+}
+
+.verbum article aside .tags ul li {
+    margin: 0;
+    display: inline;
+    font-size: 1.2em;
+}
+
+.verbum article aside .tags ul li a {
+
+}
+
+.verbum article aside .tags ul li:after {
+    content: ",";
+}
+
+.verbum article aside .tags ul li.last:after {
+    content: "";
 }
 
 .verbum article.detail, .verbum article.last {

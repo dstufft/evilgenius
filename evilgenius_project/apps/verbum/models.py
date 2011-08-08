@@ -9,6 +9,8 @@ from model_utils import Choices
 from model_utils.fields import StatusField
 from model_utils.managers import InheritanceManager
 
+from taggit.managers import TaggableManager
+
 class Bloggable(models.Model):
 
     category = None
@@ -29,6 +31,7 @@ class Bloggable(models.Model):
     author = models.ForeignKey("auth.User", verbose_name=_("author"))
 
     objects = InheritanceManager()
+    tags = TaggableManager()
 
     class Meta:
         verbose_name = _("bloggable")
