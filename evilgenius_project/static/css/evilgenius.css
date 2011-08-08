@@ -2,11 +2,9 @@
 _______________________________
 Desktop version layout - place your custom code here */
 
-body {
-    color: #555;
-    font: 12px/18px 'Istok Web', Helvetica, Arial, sans-serif;
-    background: #eee url(../img/bg.png);
-}
+/*
+--------------------------
+Misc */
 
 .clearfix:after {
     content: "";
@@ -21,6 +19,42 @@ body {
     *display: inline-block;
     height: 1%;
 }
+
+/*
+-------------------------
+General */
+
+body {
+    color: #555;
+    font: 12px/18px 'Istok Web', Helvetica, Arial, sans-serif;
+    background: #eee url(../img/bg.png);
+}
+
+a { text-decoration: none }
+
+a:hover { text-decoration: underline }
+
+/*
+--------------------------
+Text Formatting */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 25px 0;
+    font-family: 'Play', Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+h1 { font-size: 26px }
+
+h2 { font-size: 24px }
+
+h3 { font-size: 20px }
+
+h4 { font-size: 18px }
+
+h5 { font-size: 14px }
+
+h6 { font-size: 12px }
+
 
 /*
 --------------------------
