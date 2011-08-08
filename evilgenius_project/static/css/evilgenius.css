@@ -394,7 +394,8 @@ Verbum Styles */
 }
 
 .verbum article aside .author,
-.verbum article aside .category {
+.verbum article aside .category,
+.verbum article aside .comments {
     width: 100%;
     padding: 15px 14px 0 0;
 }

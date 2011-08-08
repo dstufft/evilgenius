@@ -41,6 +41,13 @@
                             <a href="" title="" rel="">{{ object.category }}</a>
                         </div>
                     {% endif %}
+
+                    {% if object.allow_comments %}
+                        <div class="comments">
+                            <strong class="title">COMMENTS</strong>
+                            <a href="{{ object.get_absolute_url }}#disqus_thread" data-disqus-identifier="{{ object.category }}_{{ object.id }}">View Comments</a>
+                        </div>
+                    {% endif %}
                 </div>
             </aside>
         </div>
