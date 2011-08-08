@@ -1,6 +1,7 @@
 from datetime import datetime
 
 from django.db import models
+from django.template.loader import render_to_string
 from django.utils.translation import ugettext_lazy as _
 
 from model_utils import Choices
@@ -38,3 +39,40 @@ class Bloggable(models.Model):
 
     def get_title(self):
         return self.title
+
+
+class Post(Bloggable):
+
+    category = _("Post")
+
+    body = models.TextField(_("body"))
+    excerpt = models.TextField(_("excerpt"), blank=True)
+
+    class Meta:
+        verbose_name = _("post")
+        verbose_name_plural = _("posts")
+
+    def get_summary(self):
+        return render_to_string("verbum/posts/summary.html", {
+            "post": self,
+        })
+
+
+class Link(Bloggable):
+
+    category = _("Link")
+
+    url = models.URLField(_("url"), max_length=250)
+    summary = models.TextField(_("summary"), blank=True)
+
+    class Meta:
+        verbose_name = _("link")
+        verbose_name_plural = _("links")
+
+    def get_absolute_url(self):
+        return self.url
+
+    def get_summary(self):
+        return render_to_string("verbum/links/summary.html", {
+            "link": self,
+        })

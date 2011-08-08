@@ -55,8 +55,6 @@ INSTALLED_APPS += [
     "south",
 
     "verbum",
-    "verbum.posts",
-    "verbum.links",
 ]
 
 HOME_URLNAME = "verbum_index"
