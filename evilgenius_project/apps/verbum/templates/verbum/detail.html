@@ -1,4 +1,5 @@
 {% extends "verbum/base.html" %}
+{% load url from future %}
 {% load disqus_tags %}
 
 {% block head_title %}{{ object.title }}{% endblock %}
@@ -38,7 +39,7 @@
                     {% if object.category %}
                         <div class="category">
                             <strong class="title">CATEGORY</strong>
-                            <a href="" title="" rel="">{{ object.get_category_display }}</a>
+                            <a href="{% url 'verbum_category_index' category=object.category %}" title="{{ object.get_category_display }}">{{ object.get_category_display }}</a>
                         </div>
                     {% endif %}
 

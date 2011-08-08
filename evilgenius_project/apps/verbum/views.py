@@ -9,6 +9,13 @@ class VerbumIndexView(ArchiveIndexView):
     paginate_by = conf.PAGINATE_BY
     queryset = Bloggable.objects.filter(status=Bloggable.STATUS.published).select_subclasses()
 
+
+class CategoryIndexView(VerbumIndexView):
+
+    def get_queryset(self):
+        qs = super(CategoryIndexView, self).get_queryset()
+        return qs.filter(category=getattr(Bloggable.CATEGORIES, self.kwargs["category"]))
+
 class VerbumDetailView(DateDetailView):
 
     date_field = "when"
