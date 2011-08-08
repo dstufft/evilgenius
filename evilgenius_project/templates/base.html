@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" >
     <meta charset="utf-8">
 
-    <title>{% block head_title_base %}{% if SITE_NAME %}{{ SITE_NAME }} : {% endif %}{% block head_title %}{% endblock %}{% endblock %}</title>
+    <title>{% block head_title_base %}{% block head_title %}{% endblock %}{% if SITE_NAME %} : {{ SITE_NAME }}{% endif %}{% endblock %}</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
