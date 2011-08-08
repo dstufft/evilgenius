@@ -1,12 +1,12 @@
 {% extends "verbum/base.html" %}
 {% load disqus_tags %}
 
-{% set_disqus_identifier object.category "_" object.id %}
-{% set_disqus_url object.get_absolute_url %}
-
 {% block head_title %}{{ object.title }}{% endblock %}
 
 {% block body %}
+    {% set_disqus_identifier object.category "_" object.id %}
+    {% set_disqus_url object.get_absolute_url %}
+
     <article>
         <div class="box clearfix">
             <div class="shadow post">
