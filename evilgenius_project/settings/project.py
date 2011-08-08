@@ -2,7 +2,7 @@ import os.path
 import posixpath
 
 from .base import PROJECT_ROOT
-from .pinax import STATICFILES_DIRS, TEMPLATE_DIRS, INSTALLED_APPS
+from .pinax import STATICFILES_DIRS, TEMPLATE_DIRS, INSTALLED_APPS, TEMPLATE_CONTEXT_PROCESSORS
 
 TEMPLATE_WIREFRAME = False
 
@@ -40,6 +40,8 @@ STATICFILES_DIRS = [os.path.join(PROJECT_ROOT, "static")] + STATICFILES_DIRS
 ADMIN_MEDIA_PREFIX = posixpath.join(STATIC_URL, "admin/")
 
 ROOT_URLCONF = "evilgenius_project.urls"
+
+TEMPLATE_CONTEXT_PROCESSORS += ["evilgenius.context_processors.configuration"]
 
 TEMPLATE_DIRS = [os.path.join(PROJECT_ROOT, "templates")] + TEMPLATE_DIRS
 
