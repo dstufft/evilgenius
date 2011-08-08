@@ -110,6 +110,38 @@ nav#main a:hover {
 }
 
 /*
+--------------------------
+Footer */
+
+footer {
+    padding: 10px 20px 10px 20px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #ddd;
+    display: block;
+    background: url(../img/darkbg.jpg);
+    margin: 0 0 0 0;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+footer a { color: #ddd; }
+
+footer a:visited { color: #ddd; }
+footer a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .legal {
+    float: left;
+}
+
+footer .hosted-on {
+    float: right;
+}
+
+/*
 _______________________________
 Sidebar Styles */
 
