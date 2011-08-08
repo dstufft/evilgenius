@@ -1,4 +1,5 @@
 from django.db import models
+from django.template.loader import render_to_string
 from django.utils.translation import ugettext_lazy as _
 
 from verbum.models import Bloggable
@@ -14,4 +15,6 @@ class Link(Bloggable):
         verbose_name_plural = _("links")
 
     def get_summary(self):
-        return self.url
+        return render_to_string("verbum/links/summary.html", {
+            "link": self,
+        })

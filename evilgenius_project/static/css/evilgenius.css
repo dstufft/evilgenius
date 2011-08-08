@@ -297,6 +297,38 @@ Verbum Styles */
 .verbum article header h2 a { color: #3a3a3a; }
 .verbum article header h2 a:hover { text-decoration: none; }
 
+.verbum article .link {
+    line-height: 1.8em;
+}
+
+.verbum article .link a:before {
+    content:"➞ ";
+}
+
+.verbum article .link a {
+    font-size: 1.8em;
+    height: 1.8em;
+}
+
+.verbum article .link .url:before {
+    content: "(";
+    font-style: normal;
+}
+
+.verbum article .link .url {
+    display: inline;
+    font-size: 1.3em;
+    font-style: italic;
+    position: relative;
+    top: -2px;
+    color: #969696;
+}
+
+.verbum article .link .url:after {
+    content: " )";
+    font-style: normal;
+}
+
 .verbum article .codeblock {
     max-width: 564px;
 }
