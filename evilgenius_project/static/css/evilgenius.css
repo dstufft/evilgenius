@@ -67,6 +67,42 @@ nav#main a:hover {
 
 }
 
+/*
+_______________________________
+Sidebar Styles */
+
+.sidebar-item {
+    font: 11px/18px Helvetica, Arial, sans-serif;
+    color: #888;
+    background: url(../img/postbg.jpg);
+
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 3px;
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 3px;
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 3px;
+}
+
+.sidebar-item .title {
+    font-size: 16px;
+    font-family: 'Play', Helvetica, sans-serif;
+    line-height: 22px;
+    font-weight: bold;
+    text-align: center;
+
+    background:url(../img/darkbg.jpg);
+    color:#aaa;
+    padding: 10px 10px 10px 10px;
+    margin:0 0 25px 0;
+}
+
+.sidebar-item .title a {
+    color: #eee;
+    display: block;
+}
+
+.sidebar-item .title a:hover { text-decoration: none; }
+
+
+
 
 /*
 _______________________________
