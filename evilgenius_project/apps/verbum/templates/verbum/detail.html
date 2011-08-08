@@ -39,7 +39,7 @@
                     {% if object.category %}
                         <div class="category">
                             <strong class="title">CATEGORY</strong>
-                            <a href="{% url 'verbum_category_index' category=object.category %}" title="{{ object.get_category_display }}">{{ object.get_category_display }}</a>
+                            <a href="{% url 'verbum_category' category=object.category %}" title="{{ object.get_category_display }}">{{ object.get_category_display }}</a>
                         </div>
                     {% endif %}
 
