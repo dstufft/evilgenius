@@ -33,15 +33,19 @@ Verbum Styles */
     width: 19.379%;
 }
 
-.verbum article .post-meta .date {
-    border-bottom: 1px #c1c1c1 dotted;
-    padding-bottom: 0.2em;
+.verbum article .post-meta .meta-block {
+    line-height: 1em;
     margin: 0 auto;
     width: 80%;
 }
 
+.verbum article .post-meta .date {
+    border-bottom: 1px #c1c1c1 dotted;
+    padding-bottom: 0.2em;
+}
+
 .verbum article .post-meta .date .day {
-    padding-top: 0.45em;
+    padding-top: 0.55em;
     font-size: 2.5em;
     float: left;
 }
@@ -60,6 +64,13 @@ Verbum Styles */
 .verbum article .post-meta .date .year {
     font-size: 0.9em;
 }
+
+.verbum article .post-meta .author {
+    padding-top: 1em;
+    padding-left: 2em;
+}
+
+
 
 
 

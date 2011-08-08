@@ -15,7 +15,7 @@
             </div>
 
             <div class="post-meta col_2 last">
-                <div class="date">
+                <div class="date meta-block">
                     <div class="day">{{ item.when|date:"j" }}</div>
                     <div class="month-year">
                         <div class="month">{{ item.when|date:"M" }}</div>
@@ -24,8 +24,10 @@
                     <div class="clearfix"></div>
                 </div>
 
-                <div>Author</div>
-                <div>{{ item.author }}</div>
+                <div class="meta-block author">
+                    <div>Author</div>
+                    <div><a href="">{{ item.author }}</a></div>
+                </div>
             </div>
                 </div>
         </article>
