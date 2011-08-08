@@ -26,6 +26,23 @@ class CategoryIndexView(VerbumIndexView):
         qs = super(CategoryIndexView, self).get_queryset()
         return qs.filter(category=getattr(Bloggable.CATEGORIES, self.kwargs["category"]))
 
+
+class TagIndexView(VerbumIndexView):
+
+    template_name = "verbum/bloggable_tags.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(TagIndexView, self).get_context_data(**kwargs)
+        context.update({
+            "tag": self.kwargs["tag"],
+        })
+        return context
+
+    def get_queryset(self):
+        qs = super(TagIndexView, self).get_queryset()
+        return qs.filter(tags__name__in=[self.kwargs["tag"]])
+
+
 class VerbumDetailView(DateDetailView):
 
     date_field = "when"
