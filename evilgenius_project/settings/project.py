@@ -55,6 +55,9 @@ INSTALLED_APPS += [
     "verbum.links",
 ]
 
+CONTACT_EMAIL = "donald@e.vilgeni.us"
+TWITTER_URL = "http://twitter.com/dstufft"
+
 DEBUG_TOOLBAR_CONFIG = {
     "INTERCEPT_REDIRECTS": False,
 }
