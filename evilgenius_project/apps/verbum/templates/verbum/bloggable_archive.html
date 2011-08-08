@@ -7,7 +7,7 @@
                 <div class="shadow post">
                     <div class="frame">
                         <header>
-                            <h2><a href="" title="{{ item.get_title }}">{{ item.get_title }}</a></h2>
+                            <h2><a href="{{ item.get_absolute_url }}" title="{{ item.get_title }}">{{ item.get_title }}</a></h2>
                         </header>
 
                         {{ item.get_summary }}
