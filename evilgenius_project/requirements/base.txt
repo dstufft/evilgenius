@@ -9,6 +9,5 @@
 Django==1.3
 Pinax
 
-django-debug-toolbar==0.8.4
 django-staticfiles==1.0.1
 django_compressor==0.7.1
