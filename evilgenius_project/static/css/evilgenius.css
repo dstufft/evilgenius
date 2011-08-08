@@ -400,6 +400,51 @@ Verbum Styles */
     padding: 15px 14px 0 0;
 }
 
+.verbum article.detail, .verbum article.last {
+    padding-bottom: 50px;
+}
+
+/*
+--------------------------
+Verbum Pager */
+
+.verbum .pager {
+    list-style: none;
+    width: 654px;
+    margin: 0 0 50px 0;
+}
+
+.verbum .pager li {
+    margin: 0;
+    display: inline;
+}
+
+.verbum .pager li.next { float: right; }
+
+.verbum .pager li a {
+    margin: 0;
+    display: inline-block;
+    padding: 5px 8px 5px 8px;
+    background: url(../img/postbg.jpg);
+    color: #191919;
+    font-weight: bold;
+}
+
+.verbum .pager li a { color: #191919; }
+
+.verbum .pager li a:link { color: #191919; }
+.verbum .pager li a:active { color: #191919; }
+.verbum .pager li a:visited { color: #191919; }
+.verbum .pager li a:hover { color: #484848; text-decoration: none; }
+
+.verbum .pager li.prev a:before {
+    content: "⟵ ";
+}
+
+.verbum .pager li.next a:after {
+    content: " ⟶";
+}
+
 /*
 --------------------------
 DisQus Comments */
