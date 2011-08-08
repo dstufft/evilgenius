@@ -1,0 +1,6 @@
+{% extends "verbum/detail.html" %}
+{% load markup %}
+
+{% block verbum_body %}
+    {{ object.body|restructuredtext }}
+{% endblock %}
