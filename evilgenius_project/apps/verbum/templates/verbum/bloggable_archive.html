@@ -3,13 +3,24 @@
 {% block body %}
     {% for item in latest %}
         <article>
-            <header>
-                <h1>{{ item.get_title }}</h1>
-            </header>
+            <div class="row">
+            <div class="post-body col_7 last">
+                <header>
+                    <h1>{{ item.get_title }}</h1>
+                </header>
 
-            <div>
-                {{ item.get_summary }}
+                <div>
+                    {{ item.get_summary }}
+                </div>
             </div>
+
+            <div class="post-meta col_2 last">
+                <div class="date">{{ item.when }}</div>
+
+                <div>Author</div>
+                <div>{{ item.author }}</div>
+            </div>
+                </div>
         </article>
     {% endfor %}
 {% endblock %}

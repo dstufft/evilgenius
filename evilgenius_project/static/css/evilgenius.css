@@ -3,7 +3,34 @@ _______________________________
 Desktop version layout - place your custom code here */
 
 body {
+    background: #000;
+}
 
+
+/*
+_______________________________
+Verbum Styles */
+
+.verbum article {
+    margin-bottom: 4em;
+}
+
+.verbum article .post-body {
+    background: #ffffff;
+    padding: 1em 1em 1em 1em;
+}
+
+.verbum article .post-meta {
+    background: #ffffff;
+    width: 19.379%;
+}
+
+.verbum article h1 {
+    font-size: 1.5em;
+
+    margin: 0 0 0.6em 0;
+    padding-bottom: 0.2em;
+    border-bottom: 1px #c1c1c1 dotted;
 }
 
 
