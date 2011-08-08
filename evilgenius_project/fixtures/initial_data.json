@@ -6,21 +6,5 @@
             "domain": "e.vilgeni.us",
             "name": "Evil Genius"
         }
-    },
-    {
-        "pk": 2,
-        "model": "sites.site",
-        "fields": {
-            "domain": "localhost:8000",
-            "name": "Evil Genius (Localhost)"
-        }
-    },
-    {
-        "pk": 3,
-        "model": "sites.site",
-        "fields": {
-            "domain": "zp481.o1.gondor.io",
-            "name": "Evil Genius (Gondor dev)"
-        }
     }
 ]
