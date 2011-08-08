@@ -1,3 +1,4 @@
+{% load url from future %}
 {% load i18n compress ifsetting_tag %}
 <!doctype html>
 <!--[if lt IE 7 ]> <html lang="en-us" class="no-js ie6"> <![endif]-->
@@ -53,7 +54,7 @@
         <div class="top-bar row">
             <nav id="main" class="col_10">
                 <ul>
-                    <li><a href="">Home</a></li>
+                    <li><a href="{% url settings.HOME_URLNAME %}">Home</a></li>
                 </ul>
             </nav>
 
@@ -72,7 +73,7 @@
             <div class="col_3">
 
                 <header class="col_12 last sidebar-item">
-                    <h1 class="title"><a href="">{{ SITE_NAME }}</a></h1>
+                    <h1 class="title"><a href="{% url settings.HOME_URLNAME %}">{{ SITE_NAME }}</a></h1>
 
                     <div class="inner">
                         <h2>{% trans "About Me" %}</h2>

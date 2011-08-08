@@ -55,6 +55,8 @@ INSTALLED_APPS += [
     "verbum.links",
 ]
 
+HOME_URLNAME = "verbum_index"
+
 CONTACT_EMAIL = "donald@e.vilgeni.us"
 TWITTER_URL = "http://twitter.com/dstufft"
 
