@@ -45,7 +45,7 @@
                     {% if object.allow_comments %}
                         <div class="comments">
                             <strong class="title">COMMENTS</strong>
-                            <a href="http:// {{ SITE_DOMAIN }}{{ object.get_absolute_url }}#disqus_thread" data-disqus-identifier="{{ object.category }}_{{ object.id }}">View Comments</a>
+                            <a href="http://{{ SITE_DOMAIN }}{{ object.get_absolute_url }}#disqus_thread" data-disqus-identifier="{{ object.category }}_{{ object.id }}">View Comments</a>
                         </div>
                     {% endif %}
                 </div>
