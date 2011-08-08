@@ -297,55 +297,6 @@ Verbum Styles */
 .verbum article header h2 a { color: #3a3a3a; }
 .verbum article header h2 a:hover { text-decoration: none; }
 
-.verbum article .link {
-    line-height: 1.8em;
-}
-
-.verbum article .link a:before {
-    content:"➞ ";
-}
-
-.verbum article .link a {
-    font-size: 1.8em;
-    height: 1.8em;
-}
-
-.verbum article .link .url:before {
-    content: "(";
-    font-style: normal;
-}
-
-.verbum article .link .url {
-    display: inline;
-    font-size: 1.3em;
-    font-style: italic;
-    position: relative;
-    top: -2px;
-    color: #969696;
-}
-
-.verbum article .link .url:after {
-    content: " )";
-    font-style: normal;
-}
-
-.verbum article .link .summary {
-    margin-top: 1em;
-}
-
-.verbum article .codeblock {
-    max-width: 564px;
-}
-
-.verbum article .codeblock pre {
-    width: 100%;
-    overflow-x: auto;
-    background: #111;
-    padding: 1em 1em 1em 1em;
-    margin-bottom: 1em;
-    font-weight: normal;
-}
-
 .verbum article aside {
     float: left;
     background: url(../img/postbg.jpg);
@@ -400,6 +351,63 @@ Verbum Styles */
 .verbum article aside .author {
     width: 100%;
     padding: 15px 14px 0 0;
+}
+
+/*
+--------------------------
+Verbum Posts */
+
+.verbum article .codeblock {
+    max-width: 564px;
+}
+
+.verbum article .codeblock pre {
+    width: 100%;
+    overflow-x: auto;
+    background: #111;
+    padding: 1em 1em 1em 1em;
+    margin-bottom: 1em;
+    font-weight: normal;
+}
+
+/*
+--------------------------
+Verbum Links */
+
+.verbum article .link {
+    line-height: 1.8em;
+}
+
+.verbum article .link a:before {
+    content:"➞ ";
+}
+
+.verbum article .link a {
+    font-size: 1.8em;
+    height: 1.8em;
+}
+
+.verbum article .link .url:before {
+    content: "(";
+    font-style: normal;
+}
+
+.verbum article .link .url {
+    display: inline;
+    font-size: 1.3em;
+    font-style: italic;
+    position: relative;
+    top: -2px;
+    color: #969696;
+}
+
+.verbum article .link .url:after {
+    content: " )";
+    font-style: normal;
+}
+
+.verbum article .link .summary {
+    margin-top: 1em;
 }
 
 /*
