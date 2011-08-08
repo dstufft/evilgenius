@@ -51,7 +51,9 @@
 
 <body class="{% block body_class %}base{% endblock %}">
 
-    <div class="container{% ifsetting TEMPLATE_WIREFRAME %} test{% endifsetting %}">
+    <div id="main-wrapper" class="container{% ifsetting TEMPLATE_WIREFRAME %} test{% endifsetting %}">
+
+        <div id="inner-wrapper">
 
         <div class="top-bar row">
             <nav id="main" class="col_10">
@@ -70,7 +72,7 @@
 
         {% include "_flash_messages.html" %}
 
-        <div class="row">
+        <div id="content" class="row">
 
             <div class="col_3">
 
@@ -95,6 +97,12 @@
             </section>
 
         </div>
+
+        </div>
+
+    </div>
+    
+    <div id="footer-wrapper" class="container{% ifsetting TEMPLATE_WIREFRAME %} test{% endifsetting %}">
 
         <div class="row">
             <footer>

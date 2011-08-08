@@ -24,8 +24,9 @@ Misc */
 -------------------------
 General */
 
+html, body { height: 100%; }
+
 body {
-    margin-top: 75px;
     color: #555;
     font: 12px/18px 'Istok Web', Helvetica, Arial, sans-serif;
     background: #191919 url(../img/bg.png);
@@ -37,6 +38,10 @@ a:link { color: #c14b0d; }
 a:visited { color: #c14b0d; }
 a:active { color: #c14b0d; }
 a:hover { color: #eb6721; text-decoration: underline }
+
+#inner-wrapper {
+    padding-top: 75px;
+}
 
 /*
 --------------------------
@@ -210,6 +215,41 @@ footer .legal {
 footer .hosted-on {
     float: right;
 }
+
+/*
+--------------------------
+Make Footer Stick */
+
+#main-wrapper {
+    min-height: 100%;
+}
+
+.ie6 #main-wrapper, .ie8 #main-wrapper {
+    display: table;
+    height: 100%
+}
+
+#content {
+    overflow: auto;
+    padding-bottom: 38px;
+}
+
+#footer-wrapper {
+    position: relative;
+    margin-top: -38px;
+    height: 38px;
+    clear: both;
+}
+
+/*Opera Fix*/
+body:before {
+    content:"";
+    height:100%;
+    float:left;
+    width:0;
+    margin-top:-32767px;
+}
+
 
 /*
 _______________________________
