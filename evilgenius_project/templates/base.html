@@ -16,27 +16,27 @@
 
     {% compress css %}
         {# The Columnal Grid (1140px wide base, load first), Type and image presets, and mobile stylesheet #}
-        <link rel="stylesheet" href="{{ STATIC_URL }}css/columnal/columnal.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/columnal/columnal.css" />
 
         {# Fixes for IE #}
-        <link rel="stylesheet" href="{{ STATIC_URL }}css/columnal/ie.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/columnal/ie.css" />
 
         {# use "fixed-984px-ie.css" or "fixed-960px-ie.css for a 984px or 960px fixed width for IE6 and 7 #}
-        <link rel="stylesheet" href="{{ STATIC_URL }}css/columnal/fixed-984px-ie.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/columnal/fixed-984px-ie.css" />
 
         {# Fixes for IE6, only needed if IE 6 will be supported - width must match 984px or 960px of css file used above #}
         {# Use .imagescale to fix IE6 issues with full-column width images (class must be added to any image wider than the column it is placed into) #}
-        <link rel="stylesheet" href="{{ STATIC_URL }}css/columnal/ie6-984px.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/columnal/ie6-984px.css" />
         {# End Fixed for IE #}
 
         {# Customize Here #}
-        <link rel="stylesheet" href="{{ STATIC_URL }}css/evilgenius.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/evilgenius.css" />
 
-        <link href='http://fonts.googleapis.com/css?family=Rokkitt&amp;v2' rel='stylesheet' type='text/css' />
-        <link href='http://fonts.googleapis.com/css?family=Istok+Web:400,700&amp;v2' rel='stylesheet' type='text/css' />
-        <link href='http://fonts.googleapis.com/css?family=Play:400,700&amp;v2' rel='stylesheet' type='text/css' />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Rokkitt&amp;v2" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Istok+Web:400,700&amp;v2" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Play:400,700&amp;v2" />
 
-        <link rel="stylesheet" href="{{ STATIC_URL }}css/pygments.fruity.css" type="text/css" />
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/pygments.fruity.css" />
 
         {% block extra_head_base %}
             {% block extra_head %}{% endblock %}
