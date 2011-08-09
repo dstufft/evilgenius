@@ -1,5 +1,5 @@
 {% load url from future %}
-{% load i18n compress ifsetting_tag %}
+{% load i18n compress ifsetting_tag analytics_tags %}
 <!doctype html>
 <!--[if lt IE 7 ]> <html lang="en-us" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en-us" class="no-js ie7"> <![endif]-->
@@ -117,6 +117,8 @@
         <script src="{% block jquery_src %}{{ STATIC_URL }}js/jquery-1.6.2.min.js{% endblock %}" type="text/javascript"></script>
         <script src="{{ STATIC_URL }}pinax/js/base.js" type="text/javascript"></script>
         <script src="{{ STATIC_URL }}js/evilgenius.js" type="text/javascript"></script>
+
+        {% analytics %}
 
         {% block extra_body_base %}
             {% block extra_body %}{% endblock %}

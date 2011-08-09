@@ -39,4 +39,5 @@ INSTALLED_APPS += [
     # external
     "staticfiles",
     "compressor",
+    "analytics",
 ]
