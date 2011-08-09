@@ -8,62 +8,103 @@
     {% set_disqus_identifier object.category "_" object.id %}
     {% set_disqus_url "http://" SITE_DOMAIN object.get_absolute_url %}
 
-    <article class="detail">
-        <div class="box clearfix">
-            <div class="shadow post">
-                <div class="frame">
-                    <header>
-                        <h2><a href="{{ object.get_absolute_url }}" title="{{ object.get_title }}">{{ object.get_title }}</a></h2>
-                    </header>
+    <article>
+            <div class="box clearfix">
+                <aside class="col_2 last mobile-only">
+                    <div class="bar-frame clearfix">
+                        <div class="date clearfix">
+                            <strong class="day">{{ object.when|date:"j" }}</strong>
+                            <div class="holder">
+                                <span class="month">{{ object.when|date:"M" }}</span>
+                                <span class="year">{{ object.when|date:"Y" }}</span>
+                            </div>
+                        </div>
 
-                    {% block verbum_body %}
-                    {% endblock %}
+                        <div class="author">
+                            <strong class="title">AUTHOR</strong>
+                            <a href="{{ object.author.get_absolute_url }}" title="{{ object.author.get_full_name|default:object.author }}">{{ object.author.get_full_name|default:object.author }}</a>
+                        </div>
+
+                        {% if object.category %}
+                            <div class="category">
+                                <strong class="title">CATEGORY</strong>
+                                <a href="{% url 'verbum_category' category=object.category %}" title="{{ object.get_category_display }}">{{ object.get_category_display }}</a>
+                            </div>
+                        {% endif %}
+
+                        {% if object.allow_comments %}
+                            <div class="comments">
+                                <strong class="title">COMMENTS</strong>
+                                <a href="http://{{ SITE_DOMAIN }}{{ object.get_absolute_url }}#disqus_thread" data-disqus-identifier="{{ object.category }}_{{ object.id }}">View Comments</a>
+                            </div>
+                        {% endif %}
+
+                        {% if object.tags.all %}
+                            <div class="tags">
+                                <strong class="title">TAGS</strong>
+                                <ul>
+                                    {% for tag in object.tags.all %}
+                                    <li{% if forloop.last %} class="last"{% endif %}><a href="{% url 'verbum_tag' tag=tag %}">{{ tag }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                    </div>
+                </aside>
+
+                <div class="shadow post col_7 last">
+                    <div class="frame">
+                        <header>
+                            <h2><a href="{{ object.get_absolute_url }}" title="{{ object.get_title }}">{{ object.get_title }}</a></h2>
+                        </header>
+
+                        {{ object.get_summary }}
+                    </div>
                 </div>
+
+                <aside class="col_2 last mobile-hide">
+                    <div class="bar-frame">
+                        <div class="date clearfix">
+                            <strong class="day">{{ object.when|date:"j" }}</strong>
+                            <div class="holder">
+                                <span class="month">{{ object.when|date:"M" }}</span>
+                                <span class="year">{{ object.when|date:"Y" }}</span>
+                            </div>
+                        </div>
+
+                        <div class="author">
+                            <strong class="title">AUTHOR</strong>
+                            <a href="{{ object.author.get_absolute_url }}" title="{{ object.author.get_full_name|default:object.author }}">{{ object.author.get_full_name|default:object.author }}</a>
+                        </div>
+
+                        {% if object.category %}
+                            <div class="category">
+                                <strong class="title">CATEGORY</strong>
+                                <a href="{% url 'verbum_category' category=object.category %}" title="{{ object.get_category_display }}">{{ object.get_category_display }}</a>
+                            </div>
+                        {% endif %}
+
+                        {% if object.allow_comments %}
+                            <div class="comments">
+                                <strong class="title">COMMENTS</strong>
+                                <a href="http://{{ SITE_DOMAIN }}{{ object.get_absolute_url }}#disqus_thread" data-disqus-identifier="{{ object.category }}_{{ object.id }}">View Comments</a>
+                            </div>
+                        {% endif %}
+
+                        {% if object.tags.all %}
+                            <div class="tags">
+                                <strong class="title">TAGS</strong>
+                                <ul>
+                                    {% for tag in object.tags.all %}
+                                    <li{% if forloop.last %} class="last"{% endif %}><a href="{% url 'verbum_tag' tag=tag %}">{{ tag }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                    </div>
+                </aside>
             </div>
-
-            <aside>
-                <div class="bar-frame">
-                    <div class="date clearfix">
-                        <strong class="day">{{ object.when|date:"j" }}</strong>
-                        <div class="holder">
-                            <span class="month">{{ object.when|date:"M" }}</span>
-                            <span class="year">{{ object.when|date:"Y" }}</span>
-                        </div>
-                    </div>
-
-                    <div class="author">
-                        <strong class="title">AUTHOR</strong>
-                        <a href="{{ object.author.get_absolute_url }}" title="{{ object.author.get_full_name|default:object.author }}">{{ object.author.get_full_name|default:object.author }}</a>
-                    </div>
-
-                    {% if object.category %}
-                        <div class="category">
-                            <strong class="title">CATEGORY</strong>
-                            <a href="{% url 'verbum_category' category=object.category %}" title="{{ object.get_category_display }}">{{ object.get_category_display }}</a>
-                        </div>
-                    {% endif %}
-
-                    {% if object.allow_comments %}
-                        <div class="comments">
-                            <strong class="title">COMMENTS</strong>
-                            <a href="http://{{ SITE_DOMAIN }}{{ object.get_absolute_url }}#disqus_thread" data-disqus-identifier="{{ object.category }}_{{ object.id }}">View Comments</a>
-                        </div>
-                    {% endif %}
-
-                    {% if item.tags.all %}
-                        <div class="tags">
-                            <strong class="title">TAGS</strong>
-                            <ul>
-                                {% for tag in item.tags.all %}
-                                <li{% if forloop.last %} class="last"{% endif %}><a href="{% url 'verbum_tag' tag=tag %}">{{ tag }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    {% endif %}
-                </div>
-            </aside>
-        </div>
-    </article>
+        </article>
 
     {% if object.allow_comments %}
         <section id="comments">

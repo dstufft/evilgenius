@@ -4,9 +4,51 @@
 
 {% block body %}
     {% for item in latest %}
-        <article{% if forloop.last %} class="last"{% endif %}>
+        <article>
             <div class="box clearfix">
-                <div class="shadow post">
+                <aside class="col_2 last mobile-only">
+                    <div class="bar-frame clearfix">
+                        <div class="date clearfix">
+                            <strong class="day">{{ item.when|date:"j" }}</strong>
+                            <div class="holder">
+                                <span class="month">{{ item.when|date:"M" }}</span>
+                                <span class="year">{{ item.when|date:"Y" }}</span>
+                            </div>
+                        </div>
+
+                        <div class="author">
+                            <strong class="title">AUTHOR</strong>
+                            <a href="{{ item.author.get_absolute_url }}" title="{{ item.author.get_full_name|default:item.author }}">{{ item.author.get_full_name|default:item.author }}</a>
+                        </div>
+
+                        {% if item.category %}
+                            <div class="category">
+                                <strong class="title">CATEGORY</strong>
+                                <a href="{% url 'verbum_category' category=item.category %}" title="{{ item.get_category_display }}">{{ item.get_category_display }}</a>
+                            </div>
+                        {% endif %}
+
+                        {% if item.allow_comments %}
+                            <div class="comments">
+                                <strong class="title">COMMENTS</strong>
+                                <a href="http://{{ SITE_DOMAIN }}{{ item.get_absolute_url }}#disqus_thread" data-disqus-identifier="{{ item.category }}_{{ item.id }}">View Comments</a>
+                            </div>
+                        {% endif %}
+
+                        {% if item.tags.all %}
+                            <div class="tags">
+                                <strong class="title">TAGS</strong>
+                                <ul>
+                                    {% for tag in item.tags.all %}
+                                    <li{% if forloop.last %} class="last"{% endif %}><a href="{% url 'verbum_tag' tag=tag %}">{{ tag }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                    </div>
+                </aside>
+                
+                <div class="shadow post col_7 last">
                     <div class="frame">
                         <header>
                             <h2><a href="{{ item.get_absolute_url }}" title="{{ item.get_title }}">{{ item.get_title }}</a></h2>
@@ -16,7 +58,7 @@
                     </div>
                 </div>
 
-                <aside>
+                <aside class="col_2 last mobile-hide">
                     <div class="bar-frame">
                         <div class="date clearfix">
                             <strong class="day">{{ item.when|date:"j" }}</strong>
