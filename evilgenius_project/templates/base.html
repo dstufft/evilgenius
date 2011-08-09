@@ -32,16 +32,16 @@
         {# Customize Here #}
         <link rel="stylesheet" href="{{ STATIC_URL }}css/evilgenius.css" />
 
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Rokkitt&amp;v2" />
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Istok+Web:400,700&amp;v2" />
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Play:400,700&amp;v2" />
-
         <link rel="stylesheet" href="{{ STATIC_URL }}css/pygments.fruity.css" />
 
         {% block extra_head_base %}
             {% block extra_head %}{% endblock %}
         {% endblock %}
     {% endcompress %}
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Rokkitt&amp;v2" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Istok+Web:400,700&amp;v2" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Play:400,700&amp;v2" />
 
     {% ifsetting TEMPLATE_WIREFRAME %}
         {# Page build tools - only needed while creating a site, remove when launching - Gray box colors and page debugging tools #}
