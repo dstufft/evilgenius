@@ -1,0 +1,76 @@
+{% extends "verbum/base.html" %}
+{% load url from future %}
+{% load i18n %}
+
+{% block body %}
+    {% for item in latest %}
+        <article{% if forloop.last %} class="last"{% endif %}>
+            <div class="box clearfix">
+                <div class="shadow post">
+                    <div class="frame">
+                        <header>
+                            <h2><a href="{{ item.get_absolute_url }}" title="{{ item.get_title }}">{{ item.get_title }}</a></h2>
+                        </header>
+
+                        {{ item.get_summary }}
+                    </div>
+                </div>
+
+                <aside>
+                    <div class="bar-frame">
+                        <div class="date clearfix">
+                            <strong class="day">{{ item.when|date:"j" }}</strong>
+                            <div class="holder">
+                                <span class="month">{{ item.when|date:"M" }}</span>
+                                <span class="year">{{ item.when|date:"Y" }}</span>
+                            </div>
+                        </div>
+
+                        <div class="author">
+                            <strong class="title">AUTHOR</strong>
+                            <a href="{{ item.author.get_absolute_url }}" title="{{ item.author.get_full_name|default:item.author }}">{{ item.author.get_full_name|default:item.author }}</a>
+                        </div>
+
+                        {% if item.category %}
+                            <div class="category">
+                                <strong class="title">CATEGORY</strong>
+                                <a href="{% url 'verbum_category' category=item.category %}" title="{{ item.get_category_display }}">{{ item.get_category_display }}</a>
+                            </div>
+                        {% endif %}
+
+                        {% if item.allow_comments %}
+                            <div class="comments">
+                                <strong class="title">COMMENTS</strong>
+                                <a href="http://{{ SITE_DOMAIN }}{{ item.get_absolute_url }}#disqus_thread" data-disqus-identifier="{{ item.category }}_{{ item.id }}">View Comments</a>
+                            </div>
+                        {% endif %}
+
+                        {% if item.tags.all %}
+                            <div class="tags">
+                                <strong class="title">TAGS</strong>
+                                <ul>
+                                    {% for tag in item.tags.all %}
+                                    <li{% if forloop.last %} class="last"{% endif %}><a href="{% url 'verbum_tag' tag=tag %}">{{ tag }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                    </div>
+                </aside>
+            </div>
+        </article>
+    {% endfor %}
+
+    {% block pager %}
+        {% if is_paginated %}
+        <ul class="pager">
+            {% if page_obj.has_previous %}
+                <li class="prev"><a href="{% url 'verbum_index' page=page_obj.previous_page_number %}">{% trans "Previous" %}</a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+                <li class="next"><a href="{% url 'verbum_index' page=page_obj.next_page_number %}">{% trans "Next" %}</a></li>
+            {% endif %}
+        </ul>
+        {% endif %}
+    {% endblock %}
+{% endblock %}

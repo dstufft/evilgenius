@@ -1,0 +1,169 @@
+/*
+_______________________________
+Columnal - Fixed pixel widths for Internet Explorer 6 and 7 = width 948px total */
+
+.ie6 .row, .ie7 .row {
+    margin-left: auto;
+    margin-right: auto;
+    width: 984px !important;
+    }
+
+.ie6 .last, .ie7 .last, .ie6 .omega, .ie7 .omega {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+}
+
+.ie6 .col_1, .ie6 .col_2, .ie6 .col_3, .ie6 .col_4, .ie6 .col_5, .ie6 .col_6, .ie6 .col_7, .ie6 .col_8, .ie6 .col_9, .ie6 .col_10, .ie6 .col_11, .ie6 .col_12 { display:inline; position: relative; }
+.ie7 .col_1, .ie7 .col_2, .ie7 .col_3, .ie7 .col_4, .ie7 .col_5, .ie7 .col_6, .ie7 .col_7, .ie7 .col_8, .ie7 .col_9, .ie7 .col_10, .ie7 .col_11, .ie7 .col_12 { display:inline; position: relative; }
+
+.ie6 .col_1, .ie6 .col_2, .ie6 .col_3, .ie6 .col_4, .ie6 .col_5, .ie6 .col_6, .ie6 .col_7, .ie6 .col_8, .ie6 .col_9, .ie6 .col_10, .ie6 .col_11 { margin-right: 24px; }
+.ie7 .col_1, .ie7 .col_2, .ie7 .col_3, .ie7 .col_4, .ie7 .col_5, .ie7 .col_6, .ie7 .col_7, .ie7 .col_8, .ie7 .col_9, .ie7 .col_10, .ie7 .col_11 { margin-right: 24px; }
+
+.ie6 .col_1, .ie7 .col_1 { width: 60px; }
+.ie6 .col_2, .ie7 .col_2 { width: 144px; }
+.ie6 .col_3, .ie7 .col_3 { width: 228px; }
+.ie6 .col_4, .ie7 .col_4 { width: 312px; }
+.ie6 .col_5, .ie7 .col_5 { width: 396px; }
+.ie6 .col_6, .ie7 .col_6 { width: 480px; }
+.ie6 .col_7, .ie7 .col_7 { width: 564px; }
+.ie6 .col_8, .ie7 .col_8 { width: 648px; }
+.ie6 .col_9, .ie7 .col_9 { width: 732px; }
+.ie6 .col_10, .ie7 .col_10 { width: 816px; }
+.ie6 .col_11, .ie7 .col_11 { width: 900px; }
+.ie6 .col_12, .ie7 .col_12 { clear: both; width: 984px; }
+
+
+/*
+_______________________________
+Columnal - addition */
+
+/* spacing for before column */
+.ie6 .pre_1, .ie7 .pre_1 { padding-left: 84px; }
+.ie6 .pre_2, .ie7 .pre_2 { padding-left: 168px; }
+.ie6 .pre_3, .ie7 .pre_3 { padding-left: 252px; }
+.ie6 .pre_4, .ie7 .pre_4 { padding-left: 336px; }
+.ie6 .pre_5, .ie7 .pre_5 { padding-left: 420px; }
+.ie6 .pre_6, .ie7 .pre_6 { padding-left: 504px; }
+.ie6 .pre_7, .ie7 .pre_7 { padding-left: 588px; }
+.ie6 .pre_8, .ie7 .pre_8 { padding-left: 672px; }
+.ie6 .pre_9, .ie7 .pre_9 { padding-left: 756px; }
+.ie6 .pre_10, .ie7 .pre_10 { padding-left: 840px; }
+.ie6 .pre_11, .ie7 .pre_11 { padding-left: 925px; }
+
+/* spacing for after column */
+.ie6 .suf_1, .ie7 .suf_1 { padding-right: 84px; }
+.ie6 .suf_2, .ie7 .suf_2 { padding-right: 168px; }
+.ie6 .suf_3, .ie7 .suf_3 { padding-right: 252px; }
+.ie6 .suf_4, .ie7 .suf_4 { padding-right: 336px; }
+.ie6 .suf_5, .ie7 .suf_5 { padding-right: 420px; }
+.ie6 .suf_6, .ie7 .suf_6 { padding-right: 504px; }
+.ie6 .suf_7, .ie7 .suf_7 { padding-right: 588px; }
+.ie6 .suf_8, .ie7 .suf_8 { padding-right: 672px; }
+.ie6 .suf_9, .ie7 .suf_9 { padding-right: 756px; }
+.ie6 .suf_10, .ie7 .suf_10 { padding-right: 840px; }
+.ie6 .suf_11, .ie7 .suf_11 { padding-right: 925px; }
+
+/*
+_______________________________
+Columnal - sub-columns */
+
+/* NOTE: This fixes IE 6 and 7 using the percentage spacing used in prior css files. This is mostly an issue with IE6. */
+
+/** IE 6 **/
+
+.ie6 .col_2 .col_1,
+.ie6 .col_3 .col_2, .ie6 .col_3 .col_1,
+.ie6 .col_4 .col_3, .ie6 .col_4 .col_2, .ie6 .col_4 .col_1,
+.ie6 .col_5 .col_4, .ie6 .col_5 .col_3, .ie6 .col_5 .col_2, .ie6 .col_5 .col_1,
+.ie6 .col_6 .col_5, .ie6 .col_6 .col_4, .ie6 .col_6 .col_3, .ie6 .col_6 .col_2, .ie6 .col_6 .col_1,
+.ie6 .col_7 .col_6, .ie6 .col_7 .col_5, .ie6 .col_7 .col_4, .ie6 .col_7 .col_3, .ie6 .col_7 .col_2, .ie6 .col_7 .col_1,
+.ie6 .col_8 .col_7, .ie6 .col_8 .col_6, .ie6 .col_8 .col_5, .ie6 .col_8 .col_4, .ie6 .col_8  .col_3, .ie6 .col_8 .col_2, .ie6 .col_8 .col_1,
+.ie6 .col_9 .col_1, .ie6 .col_9 .col_2, .ie6 .col_9 .col_3, .ie6 .col_9 .col_4, .ie6 .col_9 .col_5, .ie6 .col_9 .col_6, .ie6 .col_9 .col_6, .ie6 .col_9 .col_7, .ie6 .col_9 .col_8,
+.ie6 .col_10 .col_9, .ie6 .col_10 .col_8, .ie6 .col_10 .col_7, .ie6 .col_10 .col_6, .ie6 .col_10 .col_5, .ie6 .col_10 .col_4, .ie6 .col_10 .col_3, .ie6 .col_10 .col_2, .ie6 .col_10 .col_1,
+.ie6 .col_11 .col_10, .ie6 .col_11 .col_9, .ie6 .col_11 .col_8, .ie6 .col_11 .col_7, .ie6 .col_11 .col_6, .ie6 .col_11 .col_5, .ie6 .col_11 .col_4, .ie6 .col_11 .col_3, .ie6 .col_11 .col_2, .ie6 .col_11 .col_1 { margin-right: 24px; }
+
+.ie6 .col_2 .col_1, .ie6 .col_3 .col_1, .ie6 .col_4 .col_1, .ie6 .col_5 .col_1, .ie6 .col_6 .col_1, .ie6 .col_7 .col_1, .ie6 .col_8 .col_1, .ie6 .col_9 .col_1, .ie6 .col_10 .col_1, .ie6 .col_11 .col_1 { width: 60px; }
+.ie6 .col_3 .col_2, .ie6 .col_4 .col_2, .ie6 .col_5 .col_2, .ie6 .col_6 .col_2, .ie6 .col_7 .col_2, .ie6 .col_8 .col_2, .ie6 .col_9 .col_2, .ie6 .col_10 .col_2, .ie6 .col_11 .col_2 { width: 144px; }
+.ie6 .col_4 .col_3, .ie6 .col_5 .col_3, .ie6 .col_6 .col_3, .ie6 .col_7 .col_3, .ie6 .col_8 .col_3, .ie6 .col_9 .col_3, .ie6 .col_10 .col_3, .ie6 .col_11 .col_3 { width: 228px; }
+.ie6 .col_5 .col_4, .ie6 .col_6 .col_4, .ie6 .col_7 .col_4, .ie6 .col_8 .col_4, .ie6 .col_9 .col_4, .ie6 .col_10 .col_4, .ie6 .col_11 .col_4 { width: 312px; }
+.ie6 .col_6 .col_5, .ie6 .col_7 .col_5, .ie6 .col_8 .col_5, .ie6 .col_9 .col_5, .ie6 .col_10 .col_5, .ie6 .col_11 .col_5 { width: 396px; }
+.ie6 .col_7 .col_6, .ie6 .col_8 .col_6, .ie6 .col_9 .col_6, .ie6 .col_10 .col_6, .ie6 .col_11 .col_6 { width: 480px; }
+.ie6 .col_8 .col_7, .ie6 .col_9 .col_7, .ie6 .col_10 .col_7, .ie6 .col_11 .col_7 { width: 564px; }
+.ie6 .col_9 .col_8, .ie6 .col_10 .col_8, .ie6 .col_11 .col_8 { width: 648px; }
+.ie6 .col_10 .col_9, .ie6 .col_11 .col_9 { width: 732px; }
+.ie6 .col_11 .col_10 { width: 816px; }
+
+.ie6 .col_2 .pre_1, .ie6 .col_3 .pre_1, .ie6 .col_4 .pre_1, .ie6 .col_5 .pre_1, .ie6 .col_6 .pre_1, .ie6 .col_7 .pre_1, .ie6 .col_8 .pre_1, .ie6 .col_9 .pre_1, .ie6 .col_10 .pre_1, .ie6 .col_11 .pre_1 { padding-left:84px; }
+.ie6 .col_3 .pre_2, .ie6 .col_4 .pre_2, .ie6 .col_5 .pre_2, .ie6 .col_6 .pre_2, .ie6 .col_7 .pre_2, .ie6 .col_8 .pre_2, .ie6 .col_9 .pre_2, .ie6 .col_10 .pre_2, .ie6 .col_11 .pre_2 { padding-left: 168px; }
+.ie6 .col_4 .pre_3, .ie6 .col_5 .pre_3, .ie6 .col_6 .pre_3, .ie6 .col_7 .pre_3, .ie6 .col_8 .pre_3, .ie6 .col_9 .pre_3, .ie6 .col_10 .pre_3, .ie6 .col_11 .pre_3 { padding-left: 252px; }
+.ie6 .col_5 .pre_4, .ie6 .col_6 .pre_4, .ie6 .col_7 .pre_4, .ie6 .col_8 .pre_4, .ie6 .col_9 .pre_4, .ie6 .col_10 .pre_4, .ie6 .col_11 .pre_4 { padding-left: 336px; }
+.ie6 .col_6 .pre_5, .ie6 .col_7 .pre_5, .ie6 .col_8 .pre_5, .ie6 .col_9 .pre_5, .ie6 .col_10 .pre_5, .ie6 .col_11 .pre_5 { padding-left: 420px; }
+.ie6 .col_7 .pre_6, .ie6 .col_8 .pre_6, .ie6 .col_9 .pre_6, .ie6 .col_10 .pre_6, .ie6 .col_11 .pre_6 { padding-left: 504px; }
+.ie6 .col_8 .pre_7, .ie6 .col_9 .pre_7, .ie6 .col_10 .pre_7, .ie6 .col_11 .pre_7 { padding-left: 588px; }
+.ie6 .col_9 .pre_8, .ie6 .col_10 .pre_8, .ie6 .col_11 .pre_8 { padding-left: 672px; }
+.ie6 .col_10 .pre_9, .ie6 .col_11 .pre_9 { padding-left: 756px; }
+.ie6 .col_11 .pre_10 { padding-left: 840px; }
+
+.ie6 .col_2 .suf_1, .ie6 .col_3 .suf_1, .ie6 .col_4 .suf_1, .ie6 .col_5 .suf_1, .ie6 .col_6 .suf_1, .ie6 .col_7 .suf_1, .ie6 .col_8 .suf_1, .ie6 .col_9 .suf_1, .ie6 .col_10 .suf_1, .ie6 .col_11 .suf_1 { padding-right:84px; }
+.ie6 .col_3 .suf_2, .ie6 .col_4 .suf_2, .ie6 .col_5 .suf_2, .ie6 .col_6 .suf_2, .ie6 .col_7 .suf_2, .ie6 .col_8 .suf_2, .ie6 .col_9 .suf_2, .ie6 .col_10 .suf_2, .ie6 .col_11 .suf_2 { padding-right: 168px; }
+.ie6 .col_4 .suf_3, .ie6 .col_5 .suf_3, .ie6 .col_6 .suf_3, .ie6 .col_7 .suf_3, .ie6 .col_8 .suf_3, .ie6 .col_9 .suf_3, .ie6 .col_10 .suf_3, .ie6 .col_11 .suf_3 { padding-right: 252px; }
+.ie6 .col_5 .suf_4, .ie6 .col_6 .suf_4, .ie6 .col_7 .suf_4, .ie6 .col_8 .suf_4, .ie6 .col_9 .suf_4, .ie6 .col_10 .suf_4, .ie6 .col_11 .suf_4 { padding-right: 336px; }
+.ie6 .col_6 .suf_5, .ie6 .col_7 .suf_5, .ie6 .col_8 .suf_5, .ie6 .col_9 .suf_5, .ie6 .col_10 .suf_5, .ie6 .col_11 .suf_5 { padding-right: 420px; }
+.ie6 .col_7 .suf_6, .ie6 .col_8 .suf_6, .ie6 .col_9 .suf_6, .ie6 .col_10 .suf_6, .ie6 .col_11 .suf_6 { padding-right: 504px; }
+.ie6 .col_8 .suf_7, .ie6 .col_9 .suf_7, .ie6 .col_10 .suf_7, .ie6 .col_11 .suf_7 { padding-right: 588px; }
+.ie6 .col_9 .suf_8, .ie6 .col_10 .suf_8, .ie6 .col_11 .suf_8 { padding-right: 672px; }
+.ie6 .col_10 .suf_9, .ie6 .col_11 .suf_9 { padding-right: 756px; }
+.ie6 .col_11 .suf_10 { padding-right: 840px; }
+
+/** IE 7 **/
+
+.ie7 .col_2 .col_1,
+.ie7 .col_3 .col_2, .ie7 .col_3 .col_1,
+.ie7 .col_4 .col_3, .ie7 .col_4 .col_2, .ie7 .col_4 .col_1,
+.ie7 .col_5 .col_4, .ie7 .col_5 .col_3, .ie7 .col_5 .col_2, .ie7 .col_5 .col_1,
+.ie7 .col_6 .col_5, .ie7 .col_6 .col_4, .ie7 .col_6 .col_3, .ie7 .col_6 .col_2, .ie7 .col_6 .col_1,
+.ie7 .col_7 .col_6, .ie7 .col_7 .col_5, .ie7 .col_7 .col_4, .ie7 .col_7 .col_3, .ie7 .col_7 .col_2, .ie7 .col_7 .col_1,
+.ie7 .col_8 .col_7, .ie7 .col_8 .col_6, .ie7 .col_8 .col_5, .ie7 .col_8 .col_4, .ie7 .col_8  .col_3, .ie7 .col_8 .col_2, .ie7 .col_8 .col_1,
+.ie7 .col_9 .col_1, .ie7 .col_9 .col_2, .ie7 .col_9 .col_3, .ie7 .col_9 .col_4, .ie7 .col_9 .col_5, .ie7 .col_9 .col_6, .ie7 .col_9 .col_6, .ie7 .col_9 .col_7, .ie7 .col_9 .col_8,
+.ie7 .col_10 .col_9, .ie7 .col_10 .col_8, .ie7 .col_10 .col_7, .ie7 .col_10 .col_6, .ie7 .col_10 .col_5, .ie7 .col_10 .col_4, .ie7 .col_10 .col_3, .ie7 .col_10 .col_2, .ie7 .col_10 .col_1,
+.ie7 .col_11 .col_10, .ie7 .col_11 .col_9, .ie7 .col_11 .col_8, .ie7 .col_11 .col_7, .ie7 .col_11 .col_6, .ie7 .col_11 .col_5, .ie7 .col_11 .col_4, .ie7 .col_11 .col_3, .ie7 .col_11 .col_2, .ie7 .col_11 .col_1 { margin-right: 24px; }
+
+.ie7 .col_2 .col_1, .ie7 .col_3 .col_1, .ie7 .col_4 .col_1, .ie7 .col_5 .col_1, .ie7 .col_6 .col_1, .ie7 .col_7 .col_1, .ie7 .col_8 .col_1, .ie7 .col_9 .col_1, .ie7 .col_10 .col_1, .ie7 .col_11 .col_1 { width: 60px; }
+.ie7 .col_3 .col_2, .ie7 .col_4 .col_2, .ie7 .col_5 .col_2, .ie7 .col_6 .col_2, .ie7 .col_7 .col_2, .ie7 .col_8 .col_2, .ie7 .col_9 .col_2, .ie7 .col_10 .col_2, .ie7 .col_11 .col_2 { width: 144px; }
+.ie7 .col_4 .col_3, .ie7 .col_5 .col_3, .ie7 .col_6 .col_3, .ie7 .col_7 .col_3, .ie7 .col_8 .col_3, .ie7 .col_9 .col_3, .ie7 .col_10 .col_3, .ie7 .col_11 .col_3 { width: 228px; }
+.ie7 .col_5 .col_4, .ie7 .col_6 .col_4, .ie7 .col_7 .col_4, .ie7 .col_8 .col_4, .ie7 .col_9 .col_4, .ie7 .col_10 .col_4, .ie7 .col_11 .col_4 { width: 312px; }
+.ie7 .col_6 .col_5, .ie7 .col_7 .col_5, .ie7 .col_8 .col_5, .ie7 .col_9 .col_5, .ie7 .col_10 .col_5, .ie7 .col_11 .col_5 { width: 396px; }
+.ie7 .col_7 .col_6, .ie7 .col_8 .col_6, .ie7 .col_9 .col_6, .ie7 .col_10 .col_6, .ie7 .col_11 .col_6 { width: 480px; }
+.ie7 .col_8 .col_7, .ie7 .col_9 .col_7, .ie7 .col_10 .col_7, .ie7 .col_11 .col_7 { width: 564px; }
+.ie7 .col_9 .col_8, .ie7 .col_10 .col_8, .ie7 .col_11 .col_8 { width: 648px; }
+.ie7 .col_10 .col_9, .ie7 .col_11 .col_9 { width: 732px; }
+.ie7 .col_11 .col_10 { width: 816px; }
+
+.ie7 .col_2 .pre_1, .ie7 .col_3 .pre_1, .ie7 .col_4 .pre_1, .ie7 .col_5 .pre_1, .ie7 .col_6 .pre_1, .ie7 .col_7 .pre_1, .ie7 .col_8 .pre_1, .ie7 .col_9 .pre_1, .ie7 .col_10 .pre_1, .ie7 .col_11 .pre_1 { padding-left:84px; }
+.ie7 .col_3 .pre_2, .ie7 .col_4 .pre_2, .ie7 .col_5 .pre_2, .ie7 .col_6 .pre_2, .ie7 .col_7 .pre_2, .ie7 .col_8 .pre_2, .ie7 .col_9 .pre_2, .ie7 .col_10 .pre_2, .ie7 .col_11 .pre_2 { padding-left: 168px; }
+.ie7 .col_4 .pre_3, .ie7 .col_5 .pre_3, .ie7 .col_6 .pre_3, .ie7 .col_7 .pre_3, .ie7 .col_8 .pre_3, .ie7 .col_9 .pre_3, .ie7 .col_10 .pre_3, .ie7 .col_11 .pre_3 { padding-left: 252px; }
+.ie7 .col_5 .pre_4, .ie7 .col_6 .pre_4, .ie7 .col_7 .pre_4, .ie7 .col_8 .pre_4, .ie7 .col_9 .pre_4, .ie7 .col_10 .pre_4, .ie7 .col_11 .pre_4 { padding-left: 336px; }
+.ie7 .col_6 .pre_5, .ie7 .col_7 .pre_5, .ie7 .col_8 .pre_5, .ie7 .col_9 .pre_5, .ie7 .col_10 .pre_5, .ie7 .col_11 .pre_5 { padding-left: 420px; }
+.ie7 .col_7 .pre_6, .ie7 .col_8 .pre_6, .ie7 .col_9 .pre_6, .ie7 .col_10 .pre_6, .ie7 .col_11 .pre_6 { padding-left: 504px; }
+.ie7 .col_8 .pre_7, .ie7 .col_9 .pre_7, .ie7 .col_10 .pre_7, .ie7 .col_11 .pre_7 { padding-left: 588px; }
+.ie7 .col_9 .pre_8, .ie7 .col_10 .pre_8, .ie7 .col_11 .pre_8 { padding-left: 672px; }
+.ie7 .col_10 .pre_9, .ie7 .col_11 .pre_9 { padding-left: 756px; }
+.ie7 .col_11 .pre_10 { padding-left: 840px; }
+
+.ie7 .col_2 .suf_1, .ie7 .col_3 .suf_1, .ie7 .col_4 .suf_1, .ie7 .col_5 .suf_1, .ie7 .col_6 .suf_1, .ie7 .col_7 .suf_1, .ie7 .col_8 .suf_1, .ie7 .col_9 .suf_1, .ie7 .col_10 .suf_1, .ie7 .col_11 .suf_1 { padding-right:84px; }
+.ie7 .col_3 .suf_2, .ie7 .col_4 .suf_2, .ie7 .col_5 .suf_2, .ie7 .col_6 .suf_2, .ie7 .col_7 .suf_2, .ie7 .col_8 .suf_2, .ie7 .col_9 .suf_2, .ie7 .col_10 .suf_2, .ie7 .col_11 .suf_2 { padding-right: 168px; }
+.ie7 .col_4 .suf_3, .ie7 .col_5 .suf_3, .ie7 .col_6 .suf_3, .ie7 .col_7 .suf_3, .ie7 .col_8 .suf_3, .ie7 .col_9 .suf_3, .ie7 .col_10 .suf_3, .ie7 .col_11 .suf_3 { padding-right: 252px; }
+.ie7 .col_5 .suf_4, .ie7 .col_6 .suf_4, .ie7 .col_7 .suf_4, .ie7 .col_8 .suf_4, .ie7 .col_9 .suf_4, .ie7 .col_10 .suf_4, .ie7 .col_11 .suf_4 { padding-right: 336px; }
+.ie7 .col_6 .suf_5, .ie7 .col_7 .suf_5, .ie7 .col_8 .suf_5, .ie7 .col_9 .suf_5, .ie7 .col_10 .suf_5, .ie7 .col_11 .suf_5 { padding-right: 420px; }
+.ie7 .col_7 .suf_6, .ie7 .col_8 .suf_6, .ie7 .col_9 .suf_6, .ie7 .col_10 .suf_6, .ie7 .col_11 .suf_6 { padding-right: 504px; }
+.ie7 .col_8 .suf_7, .ie7 .col_9 .suf_7, .ie7 .col_10 .suf_7, .ie7 .col_11 .suf_7 { padding-right: 588px; }
+.ie7 .col_9 .suf_8, .ie7 .col_10 .suf_8, .ie7 .col_11 .suf_8 { padding-right: 672px; }
+.ie7 .col_10 .suf_9, .ie7 .col_11 .suf_9 { padding-right: 756px; }
+.ie7 .col_11 .suf_10 { padding-right: 840px; }
+
+
+/*
+--------------------------------------------------*/
+/* special debugging - fixes for debugging since outline is not supported in IE 6/7 */
+.ie6 .container.test, .ie7 .container.test {background: #eee !important;}
+.ie6 .container.test .row, .ie7 .container.test .row {background: white !important;}

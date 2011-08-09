@@ -1,4 +1,12 @@
 {% load i18n %}
-<div class="legal">
-    {% trans "&copy; 2011 &lt;Donald Stufft&gt;" %}
+<div class="col_12 last">
+    <div class="legal">
+        {% trans "&copy; 2011 Donald Stufft" %}
+    </div>
+
+    <div class="hosted-on">
+        {% blocktrans %}
+            Hosted On <a href="http://gondor.io/" title="effortless production Django hosting">Gondor</a>
+        {% endblocktrans %}
+    </div>
 </div>

@@ -24,7 +24,6 @@ STATICFILES_FINDERS += ["compressor.finders.CompressorFinder"]
 
 MIDDLEWARE_CLASSES += [
     "pinax.middleware.security.HideSensistiveFieldsMiddleware",
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 TEMPLATE_DIRS = [os.path.join(PINAX_ROOT, "themes", PINAX_THEME, "templates")] + TEMPLATE_DIRS
@@ -40,5 +39,4 @@ INSTALLED_APPS += [
     # external
     "staticfiles",
     "compressor",
-    "debug_toolbar",
 ]
