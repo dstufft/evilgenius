@@ -53,7 +53,7 @@ MIDDLEWARE_CLASSES += ["django.contrib.flatpages.middleware.FlatpageFallbackMidd
 
 TEMPLATE_CONTEXT_PROCESSORS += [
     "evilgenius.context_processors.configuration",
-    "evilgenius.context_processors.latest_tweets"
+    #"evilgenius.context_processors.latest_tweets"
 ]
 
 TEMPLATE_DIRS = [os.path.join(PROJECT_ROOT, "templates")] + TEMPLATE_DIRS
