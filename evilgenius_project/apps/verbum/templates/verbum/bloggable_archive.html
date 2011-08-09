@@ -4,9 +4,9 @@
 
 {% block body %}
     {% for item in latest %}
-        <article{% if forloop.last %} class="last"{% endif %}>
+        <article>
             <div class="box clearfix">
-                <div class="shadow post">
+                <div class="shadow post col_7 last">
                     <div class="frame">
                         <header>
                             <h2><a href="{{ item.get_absolute_url }}" title="{{ item.get_title }}">{{ item.get_title }}</a></h2>
@@ -16,7 +16,7 @@
                     </div>
                 </div>
 
-                <aside>
+                <aside class="col_2 last">
                     <div class="bar-frame">
                         <div class="date clearfix">
                             <strong class="day">{{ item.when|date:"j" }}</strong>
