@@ -35,9 +35,9 @@ TEMPLATE_CONTEXT_PROCESSORS += [
 
 INSTALLED_APPS += [
     "pinax.templatetags",
+    "pinax.apps.analytics",
 
     # external
     "staticfiles",
     "compressor",
-    "analytics",
 ]
