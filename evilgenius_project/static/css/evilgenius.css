@@ -566,6 +566,14 @@ Mobile version - preset code from cssgrid.net */
 
 @media handheld, only screen and (max-width: 767px) {
 
+    .verbum article aside .author,
+    .verbum article aside .category,
+    .verbum article aside .comments,
+    .verbum article aside .tags {
+        max-width: 70px;
+        float: left;
+    }
+
 }
 
 
