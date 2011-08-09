@@ -55,19 +55,21 @@
 
         <div id="inner-wrapper">
 
-        <div class="top-bar row">
+        <div class="top-bar">
+            <div class="wrapped row">
             <nav id="main" class="col_10">
                 <ul>
                     <li><a href="{% url settings.HOME_URLNAME %}">Home</a></li>
                 </ul>
             </nav>
 
-            <div class="col_2 last">
-                <ul id="social-media-icons">
+            <div id="social-media-icons" class="col_2 last">
+                <ul>
                     <li><a href="mailto:{{ settings.CONTACT_EMAIL }}"><img src="{{ STATIC_URL }}img/social/icon-email.png" alt="email" /></a></li>
                     <li><a href="{{ settings.TWITTER_URL }}"><img src="{{ STATIC_URL }}img/social/icon-twitter.png" alt="twitter" /></a></li>
                 </ul>
             </div>
+                </div>
         </div>
 
         {% include "_flash_messages.html" %}
