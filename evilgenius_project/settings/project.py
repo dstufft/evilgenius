@@ -51,7 +51,10 @@ ROOT_URLCONF = "evilgenius_project.urls"
 
 MIDDLEWARE_CLASSES += ["django.contrib.flatpages.middleware.FlatpageFallbackMiddleware"]
 
-TEMPLATE_CONTEXT_PROCESSORS += ["evilgenius.context_processors.configuration"]
+TEMPLATE_CONTEXT_PROCESSORS += [
+    "evilgenius.context_processors.configuration",
+    "evilgenius.context_processors.latest_tweets"
+]
 
 TEMPLATE_DIRS = [os.path.join(PROJECT_ROOT, "templates")] + TEMPLATE_DIRS
 
@@ -73,7 +76,10 @@ INSTALLED_APPS += [
 HOME_URLNAME = "verbum_index"
 
 CONTACT_EMAIL = "donald@e.vilgeni.us"
+
 TWITTER_URL = "http://twitter.com/dstufft"
+TWITTER_USER = "dstufft"
+TWITTER_TIMEOUT = 60 * 10
 
 DISQUS_WEBSITE_SHORTNAME = "evilgenius"
 

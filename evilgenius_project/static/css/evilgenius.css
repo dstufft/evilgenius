@@ -299,7 +299,18 @@ Sidebar Styles */
     border-bottom: dotted 1px #ccc;
 }
 
+/*
+--------------------------
+Tweet Styles */
 
+ul.tweets {
+    list-style: none;
+    margin: 0;
+}
+
+ul.tweets li {
+    margin: 0;
+}
 
 
 /*
