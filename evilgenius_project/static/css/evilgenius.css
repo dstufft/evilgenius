@@ -325,7 +325,7 @@ Verbum Styles */
 }
 
 .verbum article .frame {
-    width: 594px;
+    width: 664px;
     min-height: 125px;
     padding: 30px 30px 15px 30px;
     border: solid 1px #e7e7e7;
@@ -568,10 +568,6 @@ _______________________________
 Mobile version - preset code from cssgrid.net */
 
 @media handheld, only screen and (max-width: 767px) {
-
-    .examplecontainer {}
-
-    body {}
 
 }
 
