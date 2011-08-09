@@ -87,6 +87,10 @@ ABSOLUTE_URL_OVERRIDES = {
     "auth.user": lambda u: "/about/%s/" % u.username,
 }
 
+ANALYTICS_SETTINGS = {
+    "google": ["UA-20762485-2"],
+}
+
 DEBUG_TOOLBAR_CONFIG = {
     "INTERCEPT_REDIRECTS": False,
 }
