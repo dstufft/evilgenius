@@ -39,10 +39,6 @@ a:visited { color: #c14b0d; }
 a:active { color: #c14b0d; }
 a:hover { color: #eb6721; text-decoration: underline }
 
-#inner-wrapper {
-    padding-top: 75px;
-}
-
 /*
 --------------------------
 Text Formatting */
@@ -71,11 +67,9 @@ Menu Bar */
 
 .top-bar {
     background: url(../img/darkbg.jpg);
-    max-width: 1046px;
+    max-width: 1140px;
     height: 40px;
-    position: fixed;
-    top: 0;
-    z-index: 99;
+    margin-bottom: 50px;
 }
 
 nav#main a {
