@@ -88,7 +88,7 @@ ABSOLUTE_URL_OVERRIDES = {
 }
 
 ANALYTICS_SETTINGS = {
-    "google": ["UA-20762485-2"],
+    "google": {1: "UA-20762485-2"},
 }
 
 DEBUG_TOOLBAR_CONFIG = {
