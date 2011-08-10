@@ -91,6 +91,8 @@ ANALYTICS_SETTINGS = {
     "google": {"1": "UA-20762485-2"},
 }
 
+SPLIT_MARKER = ".. split"
+
 DEBUG_TOOLBAR_CONFIG = {
     "INTERCEPT_REDIRECTS": False,
 }
