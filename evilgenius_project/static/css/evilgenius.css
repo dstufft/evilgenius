@@ -489,7 +489,6 @@ DisQus Comments */
 }
 
 .verbum #comments .frame {
-    width: 594px;
     min-height: 125px;
     padding: 30px 30px 15px 30px;
     border: solid 1px #e7e7e7;
