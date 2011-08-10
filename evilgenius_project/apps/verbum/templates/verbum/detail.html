@@ -58,7 +58,8 @@
                             <h2><a href="{{ object.get_absolute_url }}" title="{{ object.get_title }}">{{ object.get_title }}</a></h2>
                         </header>
 
-                        {{ object.get_summary }}
+                        {% block verbum_body %}
+                        {% endblock %}
                     </div>
                 </div>
 
