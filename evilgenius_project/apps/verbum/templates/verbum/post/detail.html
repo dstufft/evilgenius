@@ -2,5 +2,5 @@
 {% load markup %}
 
 {% block verbum_body %}
-    {{ object.body.content|restructuredtext }}
+    {{ object.body.content|safe|restructuredtext }}
 {% endblock %}
