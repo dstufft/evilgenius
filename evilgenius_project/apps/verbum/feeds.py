@@ -105,6 +105,6 @@ urlpatterns = patterns("",
     url("^category/(?P<category>[\w]+)/rss/$", VerbumCategoryRSSFeed()),
     url("^category/(?P<category>[\w]+)/atom/$", VerbumCategoryAtomFeed()),
 
-    url("^tag/(?P<tag>[\w]+)/rss/$", VerbumTagRSSFeed()),
-    url("^tag/(?P<tag>[\w]+)/atom/$", VerbumTagAtomFeed()),
+    url("^tag/(?P<tag>[\w]+)/rss/$", VerbumTagRSSFeed(), name="verbum_rss_tag"),
+    url("^tag/(?P<tag>[\w]+)/atom/$", VerbumTagAtomFeed(), name="verbum_atom_tag"),
 )
