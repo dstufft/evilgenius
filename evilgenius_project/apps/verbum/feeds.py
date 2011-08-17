@@ -26,7 +26,7 @@ class VerbumAllRSSFeed(Feed):
         return getattr(settings, "VERBUM_BLOG_DESCRIPTION", "A Verbum Blog")
 
     def items(self):
-        return Bloggable.objects.select_subclasses()
+        return Bloggable.objects.filter(status=Bloggable.STATUS.published).select_subclasses()
 
     def item_title(self, item):
         return item.get_title()
@@ -69,7 +69,11 @@ class VerbumCategoryRSSFeed(VerbumAllRSSFeed):
         return reverse("verbum_category", kwargs={"category": obj[0]})
 
     def items(self, obj):
-        return Bloggable.objects.select_subclasses().filter(category=getattr(Bloggable.CATEGORIES, obj[0]))
+        return Bloggable.objects.filter(
+            status=Bloggable.STATUS.published
+        ).select_subclasses().filter(
+            category=getattr(Bloggable.CATEGORIES, obj[0])
+        )
 
 
 class VerbumCategoryAtomFeed(VerbumCategoryRSSFeed):
@@ -90,7 +94,9 @@ class VerbumTagRSSFeed(VerbumAllRSSFeed):
         return reverse("verbum_tag", kwargs={"tag": obj.name})
 
     def items(self, obj):
-        return Bloggable.objects.select_subclasses().filter(tags=obj)
+        return Bloggable.objects.filter(
+            status=Bloggable.STATUS.published
+        ).select_subclasses().filter(tags=obj)
 
 
 class VerbumTagAtomFeed(VerbumTagRSSFeed):
