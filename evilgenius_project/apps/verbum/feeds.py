@@ -1,10 +1,12 @@
 from django.conf import settings
 from django.conf.urls.defaults import patterns, url
 from django.core.urlresolvers import reverse
+from django.http import Http404
 
 from django.contrib.sites.models import Site
 from django.contrib.syndication.views import Feed
 
+from verbum import conf
 from verbum.models import Bloggable
 
 
@@ -53,7 +55,33 @@ class VerbumAllRSSFeed(VerbumBaseRSSFeed):
 class VerbumAllAtomFeed(VerbumBaseAtomFeed):
     pass
 
+
+class VerbumCategoryRSSFeed(VerbumBaseRSSFeed):
+
+    def get_object(self, request, category):
+        cat_items = [x for x in conf.CATEGORIES if x[0] == category]
+        if len(cat_items):
+            return cat_items[0]
+        else:
+            raise Http404("Feed for Category: %s Not Found" % category)
+
+    def title(self, obj):
+        return "%s: %s" % (Site.objects.get_current().name, obj[1])
+
+    def link(self, obj):
+        return reverse("verbum_category", kwargs={"category": obj[0]})
+
+    def items(self, obj):
+        return Bloggable.objects.select_subclasses().filter(category=getattr(Bloggable.CATEGORIES, obj[0]))
+
+
+class VerbumCategoryAtomFeed(VerbumCategoryRSSFeed, VerbumBaseAtomFeed):
+    pass
+
 urlpatterns = patterns("",
     url("^all/rss/$", VerbumAllRSSFeed()),
     url("^all/atom/$", VerbumAllAtomFeed()),
+
+    url("^category/(?P<category>[\w]+)/rss/$", VerbumCategoryRSSFeed()),
+    url("^category/(?P<category>[\w]+)/atom/$", VerbumCategoryAtomFeed()),
 )
