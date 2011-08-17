@@ -10,7 +10,7 @@ from verbum import conf
 from verbum.models import Bloggable
 
 
-class VerbumBaseRSSFeed(Feed):
+class VerbumAllRSSFeed(Feed):
 
     def title(self):
         return getattr(settings, "VERBUM_BLOG_NAME", Site.objects.get_current().name)
@@ -43,20 +43,12 @@ class VerbumBaseRSSFeed(Feed):
         return [x.name for x in item.tags.all()]
 
 
-class VerbumBaseAtomFeed(VerbumBaseRSSFeed):
+class VerbumAllAtomFeed(VerbumAllRSSFeed):
 
     subtitle = VerbumBaseRSSFeed().description()
 
 
-class VerbumAllRSSFeed(VerbumBaseRSSFeed):
-    pass
-
-
-class VerbumAllAtomFeed(VerbumBaseAtomFeed):
-    pass
-
-
-class VerbumCategoryRSSFeed(VerbumBaseRSSFeed):
+class VerbumCategoryRSSFeed(VerbumAllRSSFeed):
 
     def get_object(self, request, category):
         cat_items = [x for x in conf.CATEGORIES if x[0] == category]
@@ -75,8 +67,10 @@ class VerbumCategoryRSSFeed(VerbumBaseRSSFeed):
         return Bloggable.objects.select_subclasses().filter(category=getattr(Bloggable.CATEGORIES, obj[0]))
 
 
-class VerbumCategoryAtomFeed(VerbumCategoryRSSFeed, VerbumBaseAtomFeed):
-    pass
+class VerbumCategoryAtomFeed(VerbumCategoryRSSFeed):
+
+    feed_type = Atom1Feed
+    subtitle = VerbumAllRSSFeed().description()
 
 urlpatterns = patterns("",
     url("^all/rss/$", VerbumAllRSSFeed()),
