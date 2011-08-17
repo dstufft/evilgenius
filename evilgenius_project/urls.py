@@ -13,6 +13,11 @@ urlpatterns = patterns("",
     url(r"^admin/", include(admin.site.urls)),
 
     #url(r"about/dstufft/", TemplateView.as_view(template_name="about/dstufft.html")),
+
+    url(r"^feeds/", include(patterns("",
+        url(r"", include("verbum.feeds")),
+    ))),
+
     url(r"", include("verbum.urls")),
 )
 

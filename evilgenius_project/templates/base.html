@@ -47,6 +47,9 @@
         {# Page build tools - only needed while creating a site, remove when launching - Gray box colors and page debugging tools #}
         <link rel="stylesheet" href="{{ STATIC_URL }}css/columnal/build.css" type="text/css" media="screen" />
     {% endifsetting %}
+
+    {% block feeds %}
+    {% endblock %}
 </head>
 
 <body class="{% block body_class %}base{% endblock %}">

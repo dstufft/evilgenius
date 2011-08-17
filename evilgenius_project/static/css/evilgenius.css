@@ -434,6 +434,15 @@ Verbum Styles */
     padding-bottom: 50px;
 }
 
+.verbum article .read-more a {
+    float: right;
+}
+
+.verbum article .read-more a:after {
+    content: "→";
+    font-size: 1.4em;
+}
+
 /*
 --------------------------
 Verbum Pager */
