@@ -1,3 +1,11 @@
-{% load markup %}
+{% load markup i18n %}
 
 {{ post.body.excerpt|restructuredtext }}
+
+{% if post.body.has_more %}
+    <div class="read-more clearfix">
+        <a href="{{ post.get_absolute_url }}" title="Read More: {{ post.title }}">
+            {% trans "Read More" %}
+        </a>
+    </div>
+{% endif %}
