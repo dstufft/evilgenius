@@ -2,10 +2,13 @@ from django.conf import settings
 from django.conf.urls.defaults import patterns, url
 from django.core.urlresolvers import reverse
 from django.http import Http404
+from django.shortcuts import get_object_or_404
 from django.utils.feedgenerator import Atom1Feed
 
 from django.contrib.sites.models import Site
 from django.contrib.syndication.views import Feed
+
+from taggit.models import Tag
 
 from verbum import conf
 from verbum.models import Bloggable
@@ -72,7 +75,28 @@ class VerbumCategoryRSSFeed(VerbumAllRSSFeed):
 class VerbumCategoryAtomFeed(VerbumCategoryRSSFeed):
 
     feed_type = Atom1Feed
-    subtitle = VerbumAllRSSFeed().description()
+    subtitle = VerbumCategoryRSSFeed().description()
+
+
+class VerbumTagRSSFeed(VerbumAllRSSFeed):
+
+    def get_object(self, request, tag):
+        return get_object_or_404(Tag, name=tag)
+
+    def title(self, obj):
+        return "%s: %s" % (Site.objects.get_current().name, obj.name)
+
+    def link(self, obj):
+        return reverse("verbum_tag", kwargs={"tag": obj.name})
+
+    def items(self, obj):
+        return Bloggable.objects.select_subclasses().filter(tags=obj)
+
+
+class VerbumTagAtomFeed(VerbumTagRSSFeed):
+
+    feed_type = Atom1Feed
+    subtitle = VerbumTagRSSFeed().description()
 
 urlpatterns = patterns("",
     url("^all/rss/$", VerbumAllRSSFeed()),
@@ -80,4 +104,7 @@ urlpatterns = patterns("",
 
     url("^category/(?P<category>[\w]+)/rss/$", VerbumCategoryRSSFeed()),
     url("^category/(?P<category>[\w]+)/atom/$", VerbumCategoryAtomFeed()),
+
+    url("^tag/(?P<tag>[\w]+)/rss/$", VerbumTagRSSFeed()),
+    url("^tag/(?P<tag>[\w]+)/atom/$", VerbumTagAtomFeed()),
 )
