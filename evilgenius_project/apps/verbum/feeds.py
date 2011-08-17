@@ -102,8 +102,8 @@ urlpatterns = patterns("",
     url("^all/rss/$", VerbumAllRSSFeed(), name="verbum_rss_all"),
     url("^all/atom/$", VerbumAllAtomFeed(), name="verbum_atom_all"),
 
-    url("^category/(?P<category>[\w]+)/rss/$", VerbumCategoryRSSFeed()),
-    url("^category/(?P<category>[\w]+)/atom/$", VerbumCategoryAtomFeed()),
+    url("^category/(?P<category>[\w]+)/rss/$", VerbumCategoryRSSFeed(), name="verbum_rss_category"),
+    url("^category/(?P<category>[\w]+)/atom/$", VerbumCategoryAtomFeed(), name="verbum_atom_category"),
 
     url("^tag/(?P<tag>[\w]+)/rss/$", VerbumTagRSSFeed(), name="verbum_rss_tag"),
     url("^tag/(?P<tag>[\w]+)/atom/$", VerbumTagAtomFeed(), name="verbum_atom_tag"),
