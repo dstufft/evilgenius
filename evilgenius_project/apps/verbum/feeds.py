@@ -99,8 +99,8 @@ class VerbumTagAtomFeed(VerbumTagRSSFeed):
     subtitle = VerbumTagRSSFeed().description()
 
 urlpatterns = patterns("",
-    url("^all/rss/$", VerbumAllRSSFeed()),
-    url("^all/atom/$", VerbumAllAtomFeed()),
+    url("^all/rss/$", VerbumAllRSSFeed(), name="verbum_rss_all"),
+    url("^all/atom/$", VerbumAllAtomFeed(), name="verbum_atom_all"),
 
     url("^category/(?P<category>[\w]+)/rss/$", VerbumCategoryRSSFeed()),
     url("^category/(?P<category>[\w]+)/atom/$", VerbumCategoryAtomFeed()),
