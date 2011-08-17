@@ -8,7 +8,7 @@ from django.contrib.syndication.views import Feed
 from verbum.models import Bloggable
 
 
-class VerbumAllRSSFeed(Feed):
+class VerbumBaseRSSFeed(Feed):
 
     def title(self):
         return getattr(settings, "VERBUM_BLOG_NAME", Site.objects.get_current().name)
@@ -41,9 +41,17 @@ class VerbumAllRSSFeed(Feed):
         return [x.name for x in item.tags.all()]
 
 
-class VerbumAllAtomFeed(VerbumAllRSSFeed):
+class VerbumBaseAtomFeed(VerbumBaseRSSFeed):
 
-    subtitle = VerbumAllRSSFeed().description()
+    subtitle = VerbumBaseRSSFeed().description()
+
+
+class VerbumAllRSSFeed(VerbumBaseRSSFeed):
+    pass
+
+
+class VerbumAllAtomFeed(VerbumBaseAtomFeed):
+    pass
 
 urlpatterns = patterns("",
     url("^all/rss/$", VerbumAllRSSFeed()),
