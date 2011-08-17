@@ -2,6 +2,7 @@ from django.conf import settings
 from django.conf.urls.defaults import patterns, url
 from django.core.urlresolvers import reverse
 from django.http import Http404
+from django.utils.feedgenerator import Atom1Feed
 
 from django.contrib.sites.models import Site
 from django.contrib.syndication.views import Feed
@@ -45,7 +46,8 @@ class VerbumAllRSSFeed(Feed):
 
 class VerbumAllAtomFeed(VerbumAllRSSFeed):
 
-    subtitle = VerbumBaseRSSFeed().description()
+    feed_type = Atom1Feed
+    subtitle = VerbumAllRSSFeed().description()
 
 
 class VerbumCategoryRSSFeed(VerbumAllRSSFeed):
