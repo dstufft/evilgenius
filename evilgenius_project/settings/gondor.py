@@ -1,8 +1,13 @@
-"""
-Used as a Wrapper For Gondor Settings
-"""
 from importlib import import_module
 import sys
+
+from .base import *
+
+from .django import *
+
+from .pinax import *
+
+from .project import *
 
 try:
     from local_settings import *
